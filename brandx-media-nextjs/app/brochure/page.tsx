@@ -267,45 +267,49 @@ const BrochurePage = () => {
       </section>
 
       {/* 📞 Page 9 — Ready to Grow Section */}
-      <section className="min-h-screen flex flex-col items-center justify-center px-8 py-32 bg-primary text-on-primary text-center">
+      <section className="min-h-screen flex flex-col items-center justify-center px-8 py-32 bg-surface-container-lowest text-on-surface text-center relative overflow-hidden">
+        {/* Subtle glow effect */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 blur-[120px] rounded-full pointer-events-none" />
+
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
+          className="relative z-10"
         >
-          <span className="label-md text-on-primary-container tracking-[0.2em] uppercase mb-8 block">Next Steps</span>
+          <span className="label-md text-primary tracking-[0.2em] uppercase mb-8 block">Next Steps</span>
           <h2 className="text-7xl md:text-9xl font-black tracking-tighter mb-16 leading-none">
             Ready to Grow <br/>Your Brand?
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
             <div className="flex flex-col items-center">
-              <span className="material-symbols-outlined text-4xl mb-4">call</span>
+              <span className="material-symbols-outlined text-4xl mb-4 text-primary">call</span>
               <p className="text-xl font-bold uppercase tracking-widest">Phone</p>
-              <div className="flex flex-col gap-1 items-center opacity-80 mt-2">
-                <a href="tel:+919347047827" className="hover:text-on-primary-container transition-colors">+91 93470 47827</a>
-                <a href="tel:+919347651574" className="hover:text-on-primary-container transition-colors">+91 93476 51574</a>
+              <div className="flex flex-col gap-1 items-center text-on-surface-variant mt-2">
+                <a href="tel:+919347047827" className="hover:text-primary transition-colors">+91 93470 47827</a>
+                <a href="tel:+919347651574" className="hover:text-primary transition-colors">+91 93476 51574</a>
               </div>
             </div>
             <div className="flex flex-col items-center">
-              <span className="material-symbols-outlined text-4xl mb-4">mail</span>
+              <span className="material-symbols-outlined text-4xl mb-4 text-primary">mail</span>
               <p className="text-xl font-bold uppercase tracking-widest">Email</p>
-              <p className="opacity-80 lowercase">brandxmedia.co@gmail.com</p>
+              <p className="text-on-surface-variant lowercase mt-2">brandxmedia.co@gmail.com</p>
             </div>
             <div className="flex flex-col items-center">
-              <span className="material-symbols-outlined text-4xl mb-4">camera</span>
+              <span className="material-symbols-outlined text-4xl mb-4 text-primary">camera</span>
               <p className="text-xl font-bold uppercase tracking-widest">Instagram</p>
-              <p className="opacity-80">@brandxmedia</p>
+              <p className="text-on-surface-variant mt-2">@brandxmedia</p>
             </div>
             <div className="flex flex-col items-center">
-              <span className="material-symbols-outlined text-4xl mb-4">location_on</span>
+              <span className="material-symbols-outlined text-4xl mb-4 text-primary">location_on</span>
               <p className="text-xl font-bold uppercase tracking-widest">Location</p>
-              <p className="opacity-80">Vijayawada, AP</p>
+              <p className="text-on-surface-variant mt-2">Vijayawada, AP</p>
             </div>
           </div>
           
           <a 
             href="mailto:brandxmedia.co@gmail.com" 
-            className="inline-block bg-on-primary text-primary px-16 py-8 rounded-full font-black text-2xl uppercase tracking-tighter hover:scale-105 transition-all shadow-2xl"
+            className="inline-block bg-primary text-on-primary px-16 py-8 rounded-full font-black text-2xl uppercase tracking-tighter hover:scale-105 hover:bg-primary/90 transition-all shadow-[0_0_40px_-10px_rgba(46,91,255,0.5)]"
           >
             Start Your Journey
           </a>
