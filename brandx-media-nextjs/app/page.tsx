@@ -22,7 +22,10 @@ export default function Home() {
         {/* Footer */}
         <footer className="w-full py-8 bg-[#131313] border-t border-white/5 text-xs uppercase tracking-widest text-[#c4c5d9] opacity-60">
           <div className="flex flex-col md:flex-row justify-between items-center px-8 max-w-[1440px] mx-auto gap-4">
-            <span className="font-bold text-white">BrandXMedia</span>
+            <div className="flex items-center gap-8">
+              <span className="font-bold text-white">BrandXMedia</span>
+              <a href="mailto:hello@brandxmedia.com" className="hover:text-primary transition-colors lowercase tracking-normal">hello@brandxmedia.com</a>
+            </div>
             <p>© 2026 BrandXMedia. All rights reserved.</p>
           </div>
         </footer>
