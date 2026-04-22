@@ -160,6 +160,39 @@ export default function ScrollSections() {
         </Marquee>
       </section>
 
+      {/* ═══ FAQ SECTION ═══ */}
+      <section className="py-32 bg-surface">
+        <div className="max-w-[1440px] mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-20">
+          <div>
+            <span className="label-md tracking-widest uppercase text-primary">FAQ</span>
+            <h2 className="text-5xl font-black tracking-tighter mt-4 leading-none">
+              Questions? <br/> We got answers.
+            </h2>
+            <p className="text-on-surface-variant text-lg mt-8 max-w-md">
+              Everything you need to know about our process, pricing, and how we help your brand grow.
+            </p>
+          </div>
+          <div className="space-y-6">
+            {[
+              { q: "How long does a typical project take?", a: "Most website and branding projects take between 4 to 8 weeks, depending on the complexity and scope of the requirements." },
+              { q: "What is your pricing structure?", a: "We work on a project-based pricing model tailored to your specific needs. We also offer monthly growth retainers for ongoing optimization and scaling." },
+              { q: "Do you handle maintenance after launch?", a: "Yes, we provide ongoing support, maintenance, and performance monitoring to ensure your digital assets continue to perform at their peak." },
+              { q: "How do we get started?", a: "Simply book a free strategy call via our contact form. We'll discuss your goals and see if we're a good fit for each other." },
+            ].map((item, i) => (
+              <details key={i} className="group border-b border-on-surface/10 pb-6 cursor-pointer">
+                <summary className="flex justify-between items-center list-none">
+                  <h3 className="text-xl font-bold group-hover:text-primary transition-colors">{item.q}</h3>
+                  <span className="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                </summary>
+                <p className="text-on-surface-variant mt-4 leading-relaxed max-w-2xl">
+                  {item.a}
+                </p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ═══ FINAL CTA ═══ */}
       <section className="py-40 relative overflow-hidden">
         <div className="absolute inset-0 bg-primary-container/5 pointer-events-none" />
