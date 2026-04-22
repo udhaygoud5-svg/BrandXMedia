@@ -4,13 +4,14 @@ import React, { useEffect, useState } from 'react';
 interface SplinePlayerProps {
   scene: string;
   className?: string;
+  onLoad?: (app: any) => void;
 }
 
 /**
  * A production-grade Spline player using the official <spline-viewer> web component.
  * This is the most stable way to render Spline scenes in Next.js/Vercel.
  */
-export default function SplinePlayer({ scene, className }: SplinePlayerProps) {
+export default function SplinePlayer({ scene, className, onLoad }: SplinePlayerProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [scriptLoaded, setScriptLoaded] = useState(false);
 
@@ -27,6 +28,14 @@ export default function SplinePlayer({ scene, className }: SplinePlayerProps) {
     }
   }, []);
 
+  const handleLoad = (e: any) => {
+    setIsLoading(false);
+    if (onLoad) {
+      // The web component's load event target is the viewer itself
+      onLoad(e.target);
+    }
+  };
+
   return (
     <div className={`relative ${className}`} style={{ width: '100%', height: '100%' }}>
       {isLoading && (
@@ -40,7 +49,7 @@ export default function SplinePlayer({ scene, className }: SplinePlayerProps) {
           {/* @ts-ignore */}
           <spline-viewer 
             url={scene}
-            onLoad={() => setIsLoading(false)}
+            onLoad={handleLoad}
             style={{ width: '100%', height: '100%' }}
           />
         </div>
