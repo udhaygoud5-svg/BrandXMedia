@@ -1,42 +1,10 @@
 "use client";
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
+import Spline from '@splinetool/react-spline/next';
 
 const BrochurePage = () => {
-  const viewerRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    // Inject CSS into the shadow DOM to hide the logo permanently
-    const timer = setInterval(() => {
-      if (viewerRef.current?.shadowRoot) {
-        const shadow = viewerRef.current.shadowRoot;
-        // Also try to remove it directly
-        const logo = shadow.querySelector('#logo') || shadow.querySelector('a[href*="spline.design"]');
-        if (logo) {
-          logo.remove();
-        }
-        // Inject a style block just in case it gets re-added
-        if (!shadow.querySelector('#hide-logo-style')) {
-          const style = document.createElement('style');
-          style.id = 'hide-logo-style';
-          style.textContent = `
-            #logo, a[href*="spline.design"], .spline-watermark {
-              display: none !important;
-              opacity: 0 !important;
-              pointer-events: none !important;
-              visibility: hidden !important;
-            }
-          `;
-          shadow.appendChild(style);
-          clearInterval(timer);
-        }
-      }
-    }, 100);
-
-    return () => clearInterval(timer);
-  }, []);
-
   return (
     <main className="bg-surface text-on-surface font-['Inter'] selection:bg-primary/30">
       <Navbar />
@@ -44,7 +12,7 @@ const BrochurePage = () => {
       {/* 🎯 Page 1 — Cover Page */}
       <section className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-8">
         <div className="absolute inset-0 z-0 pointer-events-none opacity-60">
-          <spline-viewer ref={viewerRef} url="https://prod.spline.design/zA-Wp5ys1AoJhU-y/scene.splinecode"></spline-viewer>
+          <Spline scene="https://prod.spline.design/zA-Wp5ys1AoJhU-y/scene.splinecode" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-surface/20 via-transparent to-surface pointer-events-none z-1" />
         

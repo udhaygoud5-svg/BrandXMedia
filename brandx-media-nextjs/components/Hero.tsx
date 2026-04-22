@@ -1,46 +1,13 @@
 "use client";
 import { motion } from 'framer-motion';
-import { useEffect, useRef } from 'react';
+import Spline from '@splinetool/react-spline/next';
 
 export default function Hero() {
-  const viewerRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    // Inject CSS into the shadow DOM to hide the logo permanently
-    const timer = setInterval(() => {
-      if (viewerRef.current?.shadowRoot) {
-        const shadow = viewerRef.current.shadowRoot;
-        // Also try to remove it directly
-        const logo = shadow.querySelector('#logo') || shadow.querySelector('a[href*="spline.design"]');
-        if (logo) {
-          logo.remove();
-        }
-        // Inject a style block just in case it gets re-added
-        if (!shadow.querySelector('#hide-logo-style')) {
-          const style = document.createElement('style');
-          style.id = 'hide-logo-style';
-          style.textContent = `
-            #logo, a[href*="spline.design"], .spline-watermark {
-              display: none !important;
-              opacity: 0 !important;
-              pointer-events: none !important;
-              visibility: hidden !important;
-            }
-          `;
-          shadow.appendChild(style);
-          clearInterval(timer);
-        }
-      }
-    }, 100);
-
-    return () => clearInterval(timer);
-  }, []);
-
   return (
     <section className="relative w-full min-h-screen flex items-center overflow-hidden pt-24 pb-16 bg-surface">
       {/* Background Spline Scene */}
       <div className="absolute inset-0 z-0 pointer-events-auto">
-        <spline-viewer ref={viewerRef} url="https://prod.spline.design/zA-Wp5ys1AoJhU-y/scene.splinecode"></spline-viewer>
+        <Spline scene="https://prod.spline.design/zA-Wp5ys1AoJhU-y/scene.splinecode" />
       </div>
 
       {/* White Backlight Glow */}
