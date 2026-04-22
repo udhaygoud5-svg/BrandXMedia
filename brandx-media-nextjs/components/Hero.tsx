@@ -1,22 +1,33 @@
 "use client";
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import Spline from '@splinetool/react-spline/next';
+import Spline from '@splinetool/react-spline';
 
 export default function Hero() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   return (
     <section className="relative w-full min-h-screen flex items-center overflow-hidden pt-24 pb-16 bg-surface">
-      {/* Background Layer (Fallback for WebGL errors) */}
+      {/* 🌌 Base Layer (Fallback Glow) */}
       <div className="absolute inset-0 bg-surface z-0">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(46,91,255,0.1),transparent_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(46,91,255,0.12),transparent_70%)]" />
       </div>
 
-      {/* Background Spline Scene */}
-      <div className="absolute inset-0 z-1 pointer-events-auto opacity-80">
-        <Spline scene="https://prod.spline.design/zA-Wp5ys1AoJhU-y/scene.splinecode" />
-      </div>
+      {/* 🎨 3D Spline Scene */}
+      {isClient && (
+        <div className="absolute inset-0 z-[1] pointer-events-auto opacity-80">
+          <Spline 
+            scene="https://prod.spline.design/zA-Wp5ys1AoJhU-y/scene.splinecode" 
+          />
+        </div>
+      )}
 
       {/* White Backlight Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120vw] h-[120vh] bg-white/10 blur-[160px] rounded-full pointer-events-none z-2 opacity-30" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120vw] h-[120vh] bg-white/10 blur-[160px] rounded-full pointer-events-none z-[2] opacity-30" />
 
       {/* Hero Content */}
       <div className="relative z-10 w-full max-w-[1440px] mx-auto px-8 pointer-events-none">
