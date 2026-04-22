@@ -14,7 +14,6 @@ export default function Navbar() {
           <a className="text-[#c4c5d9] hover:text-[#2e5bff] transition-colors duration-300 text-sm font-medium tracking-widest uppercase" href="#work">Work</a>
           <a className="text-[#c4c5d9] hover:text-[#2e5bff] transition-colors duration-300 text-sm font-medium tracking-widest uppercase" href="#services">Services</a>
           <a className="text-[#c4c5d9] hover:text-[#2e5bff] transition-colors duration-300 text-sm font-medium tracking-widest uppercase" href="#about">About</a>
-          <a className="text-[#c4c5d9] hover:text-[#2e5bff] transition-colors duration-300 text-sm font-medium tracking-widest uppercase" href="#pricing">Pricing</a>
         </div>
 
         <a href="#contact" className="hidden md:inline-block bg-primary-container text-on-primary-container px-6 py-3 rounded-md font-semibold text-sm hover:scale-95 transition-all duration-200">
@@ -32,7 +31,6 @@ export default function Navbar() {
           <a href="#work" onClick={() => setIsOpen(false)}>Work</a>
           <a href="#services" onClick={() => setIsOpen(false)}>Services</a>
           <a href="#about" onClick={() => setIsOpen(false)}>About</a>
-          <a href="#pricing" onClick={() => setIsOpen(false)}>Pricing</a>
           <a href="#contact" onClick={() => setIsOpen(false)} className="bg-primary-container text-on-primary-container px-6 py-3 rounded-md font-semibold text-sm w-full text-center inline-block">
             Get in Touch
           </a>

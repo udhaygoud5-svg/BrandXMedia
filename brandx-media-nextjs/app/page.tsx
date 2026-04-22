@@ -3,7 +3,6 @@ import Hero from '@/components/Hero'
 import Services from '@/components/Services'
 import ContactForm from '@/components/ContactForm'
 import ScrollSections from '@/components/ScrollSections'
-import Pricing from '@/components/Pricing'
 
 export default function Home() {
   return (
@@ -18,7 +17,6 @@ export default function Home() {
         {/* Scroll sections without heavy animations */}
         <ScrollSections />
         
-        <Pricing />
         <ContactForm />
 
         {/* Footer */}
