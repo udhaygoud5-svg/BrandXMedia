@@ -25,6 +25,7 @@ export default function RootLayout({
     <html lang="en" className="dark scroll-smooth">
       <head>
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.87/build/spline-viewer.js" async></script>
       </head>
       <body className={`${inter.className} bg-surface text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container`}>
         {children}
