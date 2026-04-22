@@ -20,7 +20,7 @@ export default function SplinePlayer({ scene, className, onLoad }: SplinePlayerP
     if (typeof window !== 'undefined' && !document.querySelector('script[src*="spline-viewer"]')) {
       const script = document.createElement('script');
       script.type = 'module';
-      script.src = 'https://unpkg.com/@splinetool/viewer@1.9.0/build/spline-viewer.js';
+      script.src = 'https://unpkg.com/@splinetool/viewer@1.12.87/build/spline-viewer.js';
       script.onload = () => setScriptLoaded(true);
       document.head.appendChild(script);
     } else if (typeof window !== 'undefined') {
