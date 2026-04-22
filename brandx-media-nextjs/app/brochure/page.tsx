@@ -6,7 +6,7 @@ import Spline from '@splinetool/react-spline';
 
 const BrochurePage = () => {
   return (
-    <main className="bg-[#0a0a0a] text-white font-['Inter'] selection:bg-primary/30">
+    <main className="bg-surface text-on-surface font-['Inter'] selection:bg-primary/30">
       <Navbar />
       
       {/* 🎯 Page 1 — Cover Page */}
@@ -14,7 +14,7 @@ const BrochurePage = () => {
         <div className="absolute inset-0 z-0 pointer-events-none opacity-60">
           <Spline scene="https://prod.spline.design/vw6hp5jbZ2R3I5pX/scene.splinecode" />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/20 via-transparent to-[#0a0a0a] pointer-events-none z-1" />
+        <div className="absolute inset-0 bg-gradient-to-b from-surface/20 via-transparent to-surface pointer-events-none z-1" />
         
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -22,7 +22,7 @@ const BrochurePage = () => {
           transition={{ duration: 1 }}
           className="text-center relative z-10"
         >
-          <h1 className="text-8xl md:text-9xl font-black tracking-tighter uppercase mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/40">
+          <h1 className="text-8xl md:text-9xl font-black tracking-tighter uppercase mb-6 bg-clip-text text-transparent bg-gradient-to-b from-on-surface to-on-surface/40">
             BrandXmedia
           </h1>
           <p className="text-xl md:text-2xl tracking-[0.3em] uppercase font-light text-primary-container">
@@ -36,7 +36,7 @@ const BrochurePage = () => {
       </section>
 
       {/* 🧠 Page 2 — About Us */}
-      <section className="min-h-screen flex items-center justify-center px-8 py-32 border-t border-white/5 bg-[#0d0d0d]">
+      <section className="min-h-screen flex items-center justify-center px-8 py-32 border-t border-on-surface/5 bg-surface-container-low">
         <div className="max-w-4xl mx-auto text-center">
           <motion.span 
             initial={{ opacity: 0 }}
@@ -64,7 +64,7 @@ const BrochurePage = () => {
       </section>
 
       {/* 🚀 Page 3 — What We Do (Overview) */}
-      <section className="min-h-screen flex items-center justify-center px-8 py-32 bg-[#0a0a0a]">
+      <section className="min-h-screen flex items-center justify-center px-8 py-32 bg-surface">
         <div className="max-w-[1440px] mx-auto w-full">
           <div className="text-center mb-24">
             <span className="label-md text-primary tracking-[0.2em] uppercase mb-4 block">Our Services</span>
@@ -82,7 +82,7 @@ const BrochurePage = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-surface-container-low p-12 rounded-3xl group hover:bg-surface-container-high transition-all duration-500 border border-white/5"
+                className="bg-surface-container-low p-12 rounded-3xl group hover:bg-surface-container-high transition-all duration-500 border border-on-surface/5"
               >
                 <div className="text-primary text-5xl mb-8">
                   <span className="material-symbols-outlined text-6xl">{service.icon}</span>
@@ -103,7 +103,7 @@ const BrochurePage = () => {
       </section>
 
       {/* 🔥 Page 4 — Websites & Software */}
-      <section className="min-h-screen flex items-center justify-center px-8 py-32 bg-[#0d0d0d] border-t border-white/5">
+      <section className="min-h-screen flex items-center justify-center px-8 py-32 bg-surface-container-low border-t border-on-surface/5">
         <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center w-full">
           <div>
             <span className="label-md text-primary tracking-[0.2em] uppercase mb-8 block">01 / Web & Software</span>
@@ -127,7 +127,7 @@ const BrochurePage = () => {
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.1 }}
-                className="flex items-center gap-6 p-6 rounded-2xl bg-white/5 border border-white/5"
+                className="flex items-center gap-6 p-6 rounded-2xl bg-on-surface/5 border border-on-surface/5"
               >
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
                   {i + 1}
@@ -140,7 +140,7 @@ const BrochurePage = () => {
       </section>
 
       {/* 🎨 Page 5 — Branding & Social Media */}
-      <section className="min-h-screen flex items-center justify-center px-8 py-32 bg-[#0a0a0a] border-t border-white/5">
+      <section className="min-h-screen flex items-center justify-center px-8 py-32 bg-surface border-t border-on-surface/5">
         <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center w-full">
           <div className="order-2 lg:order-1 space-y-6">
             {[
@@ -175,7 +175,7 @@ const BrochurePage = () => {
       </section>
 
       {/* 🤖 Page 6 — WhatsApp Automation */}
-      <section className="min-h-screen flex items-center justify-center px-8 py-32 bg-[#0d0d0d] border-t border-white/5">
+      <section className="min-h-screen flex items-center justify-center px-8 py-32 bg-surface-container-low border-t border-on-surface/5">
         <div className="max-w-4xl mx-auto text-center">
           <span className="label-md text-primary tracking-[0.2em] uppercase mb-8 block">03 / Automation</span>
           <h2 className="text-6xl md:text-8xl font-black tracking-tighter mb-12 leading-none">
@@ -189,7 +189,7 @@ const BrochurePage = () => {
               'CRM Integration',
               'Sales Funnel Automation'
             ].map((item, i) => (
-              <div key={i} className="p-6 rounded-2xl bg-surface-container-high border border-white/5 flex items-center gap-4">
+              <div key={i} className="p-6 rounded-2xl bg-surface-container-high border border-on-surface/5 flex items-center gap-4">
                 <span className="material-symbols-outlined text-primary-container">bolt</span>
                 <span className="text-lg font-bold">{item}</span>
               </div>
@@ -202,7 +202,7 @@ const BrochurePage = () => {
       </section>
 
       {/* 💡 Page 7 — Our Approach */}
-      <section className="min-h-screen flex items-center justify-center px-8 py-32 bg-[#0a0a0a] border-t border-white/5">
+      <section className="min-h-screen flex items-center justify-center px-8 py-32 bg-surface border-t border-on-surface/5">
         <div className="max-w-[1440px] mx-auto w-full">
           <div className="text-center mb-32">
             <span className="label-md text-primary tracking-[0.2em] uppercase mb-4 block">Our Process</span>
@@ -210,7 +210,7 @@ const BrochurePage = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
-            <div className="absolute top-1/2 left-0 w-full h-[1px] bg-white/10 hidden md:block" />
+            <div className="absolute top-1/2 left-0 w-full h-[1px] bg-on-surface/10 hidden md:block" />
             {[
               { step: '01', title: 'Discover', desc: 'Understand your business & goals' },
               { step: '02', title: 'Strategize', desc: 'Create a custom growth plan' },
@@ -222,9 +222,9 @@ const BrochurePage = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.2 }}
-                className="relative z-10 p-12 bg-surface-container-low border border-white/5 rounded-3xl text-center group hover:bg-primary transition-all duration-500"
+                className="relative z-10 p-12 bg-surface-container-low border border-on-surface/5 rounded-3xl text-center group hover:bg-primary transition-all duration-500"
               >
-                <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center text-2xl font-black text-primary mx-auto mb-8 group-hover:bg-white group-hover:text-primary">
+                <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center text-2xl font-black text-primary mx-auto mb-8 group-hover:bg-on-primary group-hover:text-primary">
                   {item.step}
                 </div>
                 <h3 className="text-3xl font-bold mb-4 group-hover:text-white">{item.title}</h3>
@@ -236,7 +236,7 @@ const BrochurePage = () => {
       </section>
 
       {/* 📊 Page 8 — Why Choose Us */}
-      <section className="min-h-screen flex items-center justify-center px-8 py-32 bg-[#0d0d0d] border-t border-white/5 relative overflow-hidden">
+      <section className="min-h-screen flex items-center justify-center px-8 py-32 bg-surface-container-low border-t border-on-surface/5 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 blur-[150px] rounded-full pointer-events-none" />
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
@@ -256,7 +256,7 @@ const BrochurePage = () => {
                 key={i}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                className="p-10 rounded-3xl bg-white/5 border border-white/10 hover:border-primary/50 transition-colors"
+                className="p-10 rounded-3xl bg-on-surface/5 border border-on-surface/10 hover:border-primary/50 transition-colors"
               >
                 <h4 className="text-2xl font-bold mb-4 text-primary">{item.title}</h4>
                 <p className="text-on-surface-variant leading-relaxed">{item.desc}</p>
@@ -302,7 +302,7 @@ const BrochurePage = () => {
           
           <a 
             href="mailto:hello@brandxmedia.com" 
-            className="inline-block bg-white text-primary px-16 py-8 rounded-full font-black text-2xl uppercase tracking-tighter hover:scale-105 transition-all shadow-2xl"
+            className="inline-block bg-on-primary text-primary px-16 py-8 rounded-full font-black text-2xl uppercase tracking-tighter hover:scale-105 transition-all shadow-2xl"
           >
             Start Your Journey
           </a>
@@ -310,7 +310,7 @@ const BrochurePage = () => {
       </section>
       
       {/* Short Footer */}
-      <footer className="w-full py-8 bg-[#0a0a0a] border-t border-white/5 text-xs uppercase tracking-widest text-[#c4c5d9] opacity-60 text-center">
+      <footer className="w-full py-8 bg-surface border-t border-on-surface/5 text-xs uppercase tracking-widest text-on-surface-variant opacity-60 text-center">
         <p>© 2026 BrandXMedia. All rights reserved.</p>
       </footer>
     </main>
