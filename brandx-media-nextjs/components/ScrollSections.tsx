@@ -1,5 +1,6 @@
 "use client";
 import Services from './Services';
+import Pricing from './Pricing';
 import { Marquee } from './ScrollAnimations';
 import { supabase } from '@/lib/supabase/client';
 import { useState, useEffect } from 'react';
@@ -159,6 +160,9 @@ export default function ScrollSections() {
           ))}
         </Marquee>
       </section>
+
+      {/* ═══ PRICING ═══ */}
+      <Pricing />
 
       {/* ═══ FAQ SECTION ═══ */}
       <section className="py-32 bg-surface">

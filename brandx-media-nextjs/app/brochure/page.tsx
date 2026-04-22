@@ -11,10 +11,15 @@ const BrochurePage = () => {
       
       {/* 🎯 Page 1 — Cover Page */}
       <section className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-8">
-        <div className="absolute inset-0 z-0 pointer-events-none opacity-60">
+        {/* Background Layer (Fallback for WebGL errors) */}
+        <div className="absolute inset-0 bg-surface z-0">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(46,91,255,0.1),transparent_70%)]" />
+        </div>
+
+        <div className="absolute inset-0 z-1 pointer-events-none opacity-60">
           <Spline scene="https://prod.spline.design/zA-Wp5ys1AoJhU-y/scene.splinecode" />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-surface/20 via-transparent to-surface pointer-events-none z-1" />
+        <div className="absolute inset-0 bg-gradient-to-b from-surface/20 via-transparent to-surface pointer-events-none z-2" />
         
         <motion.div 
           initial={{ opacity: 0, y: 30 }}

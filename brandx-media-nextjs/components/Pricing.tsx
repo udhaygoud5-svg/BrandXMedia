@@ -1,7 +1,9 @@
+"use client";
+import { useState, useEffect } from 'react';
 import { supabase } from '@/lib/supabase/client';
 
-export default async function Pricing() {
-  const { data: dynamicPlans } = await supabase.from('pricing_plans').select('*').order('price', { ascending: true });
+export default function Pricing() {
+  const [plans, setPlans] = useState<any[]>([]);
   
   const fallbackPlans = [
     {
@@ -27,7 +29,17 @@ export default async function Pricing() {
     }
   ];
 
-  const plans = dynamicPlans?.length ? dynamicPlans : fallbackPlans;
+  useEffect(() => {
+    async function fetchPlans() {
+      const { data } = await supabase.from('pricing_plans').select('*').order('price', { ascending: true });
+      if (data?.length) {
+        setPlans(data);
+      } else {
+        setPlans(fallbackPlans);
+      }
+    }
+    fetchPlans();
+  }, []);
 
   return (
     <section id="pricing" className="py-32 bg-surface-dim border-y border-outline-variant/10">
