@@ -57,6 +57,24 @@ export default function ContactForm() {
               <p className="text-on-surface-variant text-lg text-primary-container font-bold">Only 3 audit slots remaining this month.</p>
             </div>
           </div>
+
+          <div className="mt-12 pt-8 border-t border-outline-variant/10">
+            <p className="text-sm uppercase tracking-widest text-on-surface-variant mb-2 font-bold">Direct Contact</p>
+            <div className="flex flex-col gap-2">
+              <a href="mailto:brandxmedia.co@gmail.com" className="text-xl text-primary font-medium hover:text-primary-container transition-colors">
+                brandxmedia.co@gmail.com
+              </a>
+              <div className="flex flex-col lg:flex-row gap-2 lg:gap-6 text-on-surface-variant mt-2">
+                <a href="tel:+919347047827" className="text-lg hover:text-primary transition-colors">
+                  +91 93470 47827
+                </a>
+                <span className="hidden lg:inline-block text-on-surface-variant/30">•</span>
+                <a href="tel:+919347651574" className="text-lg hover:text-primary transition-colors">
+                  +91 93476 51574
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="bg-surface-container-low/70 backdrop-blur-xl p-8 lg:p-12 rounded-2xl relative border border-on-surface/5 shadow-2xl">
