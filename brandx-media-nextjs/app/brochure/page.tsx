@@ -7,12 +7,28 @@ const BrochurePage = () => {
   const viewerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    // Attempt to remove the logo from the shadow DOM
+    // Inject CSS into the shadow DOM to hide the logo permanently
     const timer = setInterval(() => {
       if (viewerRef.current?.shadowRoot) {
-        const logo = viewerRef.current.shadowRoot.querySelector('#logo');
+        const shadow = viewerRef.current.shadowRoot;
+        // Also try to remove it directly
+        const logo = shadow.querySelector('#logo') || shadow.querySelector('a[href*="spline.design"]');
         if (logo) {
           logo.remove();
+        }
+        // Inject a style block just in case it gets re-added
+        if (!shadow.querySelector('#hide-logo-style')) {
+          const style = document.createElement('style');
+          style.id = 'hide-logo-style';
+          style.textContent = `
+            #logo, a[href*="spline.design"], .spline-watermark {
+              display: none !important;
+              opacity: 0 !important;
+              pointer-events: none !important;
+              visibility: hidden !important;
+            }
+          `;
+          shadow.appendChild(style);
           clearInterval(timer);
         }
       }
