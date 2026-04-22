@@ -3,8 +3,52 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --primary: 184 195 255; /* #b8c3ff */
+    --primary-container: 46 91 255; /* #2e5bff */
+    --surface: 19 19 19; /* #131313 */
+    --surface-container-lowest: 14 14 14;
+    --surface-container-low: 27 27 27;
+    --surface-container: 31 31 31;
+    --surface-container-high: 42 42 42;
+    --surface-container-highest: 53 53 53;
+    --on-surface: 226 226 226; /* #e2e2e2 */
+    --on-surface-variant: 196 197 217; /* #c4c5d9 */
+    --background: 19 19 19;
+  }
+
+  [data-theme='light'] {
+    --primary: 46 91 255; /* #2e5bff */
+    --primary-container: 221 225 255; /* #dde1ff */
+    --surface: 255 255 255; /* #ffffff */
+    --surface-container-lowest: 250 250 250;
+    --surface-container-low: 245 245 245;
+    --surface-container: 240 240 240;
+    --surface-container-high: 230 230 230;
+    --surface-container-highest: 220 220 220;
+    --on-surface: 19 19 19; /* #131313 */
+    --on-surface-variant: 53 53 53; /* #353535 */
+    --background: 255 255 255;
+    --grid-color: 200 200 200;
+  }
+
+  :root {
+    --primary: 184 195 255; /* #b8c3ff */
+    --primary-container: 46 91 255; /* #2e5bff */
+    --surface: 19 19 19; /* #131313 */
+    --surface-container-lowest: 14 14 14;
+    --surface-container-low: 27 27 27;
+    --surface-container: 31 31 31;
+    --surface-container-high: 42 42 42;
+    --surface-container-highest: 53 53 53;
+    --on-surface: 226 226 226; /* #e2e2e2 */
+    --on-surface-variant: 196 197 217; /* #c4c5d9 */
+    --background: 19 19 19;
+    --grid-color: 67 70 86; /* #434656 */
+  }
+
   body {
-    @apply bg-surface text-on-surface antialiased;
+    @apply bg-surface text-on-surface antialiased transition-colors duration-300;
   }
 }
 
@@ -15,7 +59,7 @@
 }
 
 .perspective-grid {
-  background-image: radial-gradient(#434656 1px, transparent 1px);
+  background-image: radial-gradient(rgb(var(--grid-color)) 1px, transparent 1px);
   background-size: 64px 64px;
 }
 

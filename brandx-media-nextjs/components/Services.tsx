@@ -1,12 +1,10 @@
 "use client";
-import { motion, useInView } from 'framer-motion';
-import { useRef, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { supabase } from '@/lib/supabase/client';
+import { GlowCard } from './GlowCard';
 
 export default function Services() {
   const [services, setServices] = useState<any[]>([]);
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   useEffect(() => {
     async function fetchServices() {
@@ -37,22 +35,17 @@ export default function Services() {
       {/* Services Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
         {services.map((s: any, i: number) => (
-          <div
+          <GlowCard
             key={i}
-            className={`${i === 0 || i === 3 ? 'md:col-span-2' : ''} 
-              bg-surface-container-low p-12 rounded-xl group 
-              hover:bg-surface-container-high hover:-translate-y-2 transition-all duration-300
-              cursor-pointer relative overflow-hidden`}
+            className={`${i === 0 || i === 3 ? 'md:col-span-2' : ''} p-12 group cursor-pointer h-full`}
+            hue={i * 60 + 200}
           >
-            {/* Hover glow effect */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary-container/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            
-            <span className="material-symbols-outlined text-primary-container text-4xl mb-8 relative z-10">
+            <span className="material-symbols-outlined text-primary text-4xl mb-8 relative z-10">
               {s.icon}
             </span>
             <h3 className="text-3xl font-bold mb-4 relative z-10">{s.title}</h3>
             <p className="text-on-surface-variant text-lg max-w-md relative z-10">{s.description}</p>
-          </div>
+          </GlowCard>
         ))}
       </div>
     </section>
