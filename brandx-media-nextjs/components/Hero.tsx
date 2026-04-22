@@ -1,6 +1,6 @@
 "use client";
-import Spline from '@splinetool/react-spline';
 import { motion } from 'framer-motion';
+import Spline from '@splinetool/react-spline';
 
 export default function Hero() {
   return (
