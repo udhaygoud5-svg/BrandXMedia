@@ -7,8 +7,6 @@ import Link from 'next/link';
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [loading, setLoading] = useState(true);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
   const router = useRouter();
   const pathname = usePathname();
 
@@ -30,16 +28,6 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     setLoading(false);
   }
 
-  async function handleLogin(e: React.FormEvent) {
-    e.preventDefault();
-    setLoading(true);
-    const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
-    if (error) alert(error.message);
-    setLoading(false);
-  }
 
   async function handleLogout() {
     await supabase.auth.signOut();
@@ -47,45 +35,14 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   }
 
   if (loading) {
-    return <div className="min-h-screen flex items-center justify-center bg-surface-dim text-on-surface">Loading...</div>;
+    return <div className="min-h-screen flex items-center justify-center bg-surface-dim text-on-surface font-black tracking-tighter text-2xl uppercase italic animate-pulse">Loading System...</div>;
   }
 
   if (!isAuthenticated) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-surface-dim">
-        <form onSubmit={handleLogin} className="bg-surface-container-low p-8 rounded-xl max-w-md w-full">
-          <h2 className="text-2xl font-bold mb-6 text-on-surface">Admin Login</h2>
-          <div className="space-y-4">
-            <div>
-              <label className="block text-sm font-medium text-on-surface-variant mb-1">Email</label>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="w-full bg-surface border border-outline-variant rounded-md px-4 py-2 text-on-surface"
-                required
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-on-surface-variant mb-1">Password</label>
-              <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                className="w-full bg-surface border border-outline-variant rounded-md px-4 py-2 text-on-surface"
-                required
-              />
-            </div>
-            <button
-              type="submit"
-              className="w-full bg-primary-container text-on-primary-container py-2 rounded-md font-bold hover:brightness-110 transition-all"
-            >
-              Sign In
-            </button>
-          </div>
-        </form>
-      </div>
-    );
+    if (typeof window !== 'undefined') {
+      router.push('/login');
+    }
+    return null;
   }
 
   const navItems = [

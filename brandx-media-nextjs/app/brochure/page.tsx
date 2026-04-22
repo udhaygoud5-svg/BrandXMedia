@@ -1,25 +1,36 @@
 "use client";
-import React from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import Navbar from '@/components/Navbar';
-import Spline from '@splinetool/react-spline/next';
+import BrochureNavbar from '@/components/BrochureNavbar';
+import SplinePlayer from '@/components/SplinePlayer';
 
 const BrochurePage = () => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   return (
     <main className="bg-surface text-on-surface font-['Inter'] selection:bg-primary/30">
-      <Navbar />
+      <BrochureNavbar />
       
       {/* 🎯 Page 1 — Cover Page */}
-      <section className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-8">
+      <section id="cover" className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-8">
         {/* Background Layer (Fallback for WebGL errors) */}
         <div className="absolute inset-0 bg-surface z-0">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(46,91,255,0.1),transparent_70%)]" />
         </div>
 
-        <div className="absolute inset-0 z-1 pointer-events-none opacity-60">
-          <Spline scene="https://prod.spline.design/zA-Wp5ys1AoJhU-y/scene.splinecode" />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-surface/20 via-transparent to-surface pointer-events-none z-2" />
+        {isClient && (
+          <div className="absolute inset-0 z-[1] pointer-events-auto opacity-70">
+            <SplinePlayer 
+              scene="https://prod.spline.design/zA-Wp5ys1AoJhU-y/scene.splinecode" 
+              className="w-full h-full"
+            />
+          </div>
+        )}
+        <div className="absolute inset-0 bg-gradient-to-b from-surface/20 via-transparent to-surface pointer-events-none z-[2]" />
         
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -69,7 +80,7 @@ const BrochurePage = () => {
       </section>
 
       {/* 🚀 Page 3 — What We Do (Overview) */}
-      <section className="min-h-screen flex items-center justify-center px-8 py-32 bg-surface">
+      <section id="services-overview" className="min-h-screen flex items-center justify-center px-8 py-32 bg-surface">
         <div className="max-w-[1440px] mx-auto w-full">
           <div className="text-center mb-24">
             <span className="label-md text-primary tracking-[0.2em] uppercase mb-4 block">Our Services</span>
@@ -207,7 +218,7 @@ const BrochurePage = () => {
       </section>
 
       {/* 💡 Page 7 — Our Approach */}
-      <section className="min-h-screen flex items-center justify-center px-8 py-32 bg-surface border-t border-on-surface/5">
+      <section id="process" className="min-h-screen flex items-center justify-center px-8 py-32 bg-surface border-t border-on-surface/5">
         <div className="max-w-[1440px] mx-auto w-full">
           <div className="text-center mb-32">
             <span className="label-md text-primary tracking-[0.2em] uppercase mb-4 block">Our Process</span>
@@ -241,7 +252,7 @@ const BrochurePage = () => {
       </section>
 
       {/* 📊 Page 8 — Why Choose Us */}
-      <section className="min-h-screen flex items-center justify-center px-8 py-32 bg-surface-container-low border-t border-on-surface/5 relative overflow-hidden">
+      <section id="why-us" className="min-h-screen flex items-center justify-center px-8 py-32 bg-surface-container-low border-t border-on-surface/5 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 blur-[150px] rounded-full pointer-events-none" />
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
@@ -272,7 +283,7 @@ const BrochurePage = () => {
       </section>
 
       {/* 📞 Page 9 — Ready to Grow Section */}
-      <section className="min-h-screen flex flex-col items-center justify-center px-8 py-32 bg-surface-container-lowest text-on-surface text-center relative overflow-hidden">
+      <section id="contact-brochure" className="min-h-screen flex flex-col items-center justify-center px-8 py-32 bg-surface-container-lowest text-on-surface text-center relative overflow-hidden">
         {/* Subtle glow effect */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 blur-[120px] rounded-full pointer-events-none" />
 

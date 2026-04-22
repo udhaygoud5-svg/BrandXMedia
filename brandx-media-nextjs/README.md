@@ -151,7 +151,8 @@ Access the admin dashboard at: `http://localhost:3000/admin`
 - **Inquiries**: View contact form submissions
 
 ### Default Admin Credentials:
-Use the email and password you created in Supabase Authentication.
+**Email**: `brandxmedia.co@gmail.com`  
+**Password**: `saifMedia@`
 
 ## 🌐 Deployment
 

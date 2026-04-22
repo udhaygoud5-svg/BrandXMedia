@@ -49,7 +49,7 @@ export default function About() {
             alt="Abstract digital architecture" 
             className="w-full h-full object-cover mix-blend-luminosity opacity-80"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-surface-dim via-transparent to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
         </motion.div>
       </div>
     </section>

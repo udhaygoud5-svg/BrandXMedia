@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import Spline from '@splinetool/react-spline';
+import SplinePlayer from './SplinePlayer';
 
 export default function Hero() {
   const [isClient, setIsClient] = useState(false);
@@ -19,9 +19,10 @@ export default function Hero() {
 
       {/* 🎨 3D Spline Scene */}
       {isClient && (
-        <div className="absolute inset-0 z-[1] pointer-events-auto opacity-80">
-          <Spline 
+        <div className="absolute inset-0 z-[1] pointer-events-auto opacity-100">
+          <SplinePlayer 
             scene="https://prod.spline.design/zA-Wp5ys1AoJhU-y/scene.splinecode" 
+            className="w-full h-full"
           />
         </div>
       )}

@@ -93,12 +93,12 @@
 
 .marquee-container::before {
   left: 0;
-  background: linear-gradient(to right, #1b1b1b, transparent);
+  background: linear-gradient(to right, rgb(var(--surface)), transparent);
 }
 
 .marquee-container::after {
   right: 0;
-  background: linear-gradient(to left, #1b1b1b, transparent);
+  background: linear-gradient(to left, rgb(var(--surface)), transparent);
 }
 
 .marquee-track {

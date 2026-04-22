@@ -1,25 +1,4 @@
-/**
- * SplineScene — Production-ready lazy-loaded Spline wrapper
- *
- * Usage:
- *   <SplineScene
- *     scene="https://prod.spline.design/YOUR_ID/scene.splinecode"
- *     className="w-full h-full"
- *     onLoad={(app) => console.log('Ready!', app)}
- *   />
- *
- * Features:
- *   - Lazy loads the ~500KB Spline runtime
- *   - Shows a spinner while loading
- *   - Passes through className and onLoad
- *   - Works in React and Next.js (with 'use client')
- */
-
-'use client';
-
-import { Suspense, lazy } from 'react';
-
-const Spline = lazy(() => import('@splinetool/react-spline'));
+import SplinePlayer from './SplinePlayer';
 
 interface SplineSceneProps {
     /** URL to the Spline scene (.splinecode file) */
@@ -38,29 +17,11 @@ interface SplineSceneProps {
  * 0 height, you'll see nothing.
  *
  * Example parent styling:
- *   style={{ width: '100%', height: '100vh' }}
  *   className="w-full h-[600px]"
  */
 export function SplineScene({ scene, className, onLoad }: SplineSceneProps) {
     return (
-        <Suspense
-            fallback={
-                <div
-                    style={{
-                        width: '100%',
-                        height: '100%',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        background: 'transparent',
-                    }}
-                >
-                    <LoadingSpinner />
-                </div>
-            }
-        >
-            <Spline scene={scene} className={className} onLoad={onLoad} />
-        </Suspense>
+        <SplinePlayer scene={scene} className={className} onLoad={onLoad} />
     );
 }
 
