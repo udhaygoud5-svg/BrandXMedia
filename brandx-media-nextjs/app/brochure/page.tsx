@@ -11,7 +11,7 @@ const BrochurePage = () => {
       {/* 🎯 Page 1 — Cover Page */}
       <section className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-8">
         <div className="absolute inset-0 z-0 pointer-events-none opacity-60">
-          <spline-viewer url="https://prod.spline.design/vw6hp5jbZ2R3I5pX/scene.splinecode"></spline-viewer>
+          <spline-viewer url="https://prod.spline.design/zA-Wp5ys1AoJhU-y/scene.splinecode"></spline-viewer>
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-surface/20 via-transparent to-surface pointer-events-none z-1" />
         

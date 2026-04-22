@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="relative w-full min-h-screen flex items-center overflow-hidden pt-24 pb-16 bg-surface">
       {/* Background Spline Scene */}
       <div className="absolute inset-0 z-0 pointer-events-auto">
-        <spline-viewer url="https://prod.spline.design/vw6hp5jbZ2R3I5pX/scene.splinecode"></spline-viewer>
+        <spline-viewer url="https://prod.spline.design/zA-Wp5ys1AoJhU-y/scene.splinecode"></spline-viewer>
       </div>
 
       {/* White Backlight Glow */}
