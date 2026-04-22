@@ -147,13 +147,13 @@ export default function ScrollSections() {
         </div>
         <Marquee speed="slow">
           {testimonials.map((t, i) => (
-            <div key={i} className="p-10 bg-surface flex flex-col justify-between w-[400px] h-[300px] rounded-lg mx-4 border border-on-surface/5">
-              <p className="text-lg leading-relaxed italic text-on-surface-variant">
+            <div key={i} className="p-10 bg-surface flex flex-col justify-between w-[450px] min-h-[350px] rounded-xl mx-6 border border-on-surface/10 shadow-xl">
+              <p className="text-lg leading-relaxed italic text-on-surface-variant line-clamp-6">
                 &ldquo;{t.content || t.quote}&rdquo;
               </p>
-              <div className="mt-8">
-                <p className="font-bold">{t.name}</p>
-                <p className="text-sm text-primary uppercase tracking-widest">{t.role}</p>
+              <div className="mt-10 pt-6 border-t border-on-surface/5">
+                <p className="font-bold text-on-surface">{t.name}</p>
+                <p className="text-sm text-primary uppercase tracking-widest font-medium">{t.role}</p>
               </div>
             </div>
           ))}
