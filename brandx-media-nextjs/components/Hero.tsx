@@ -1,12 +1,30 @@
 "use client";
 import { motion } from 'framer-motion';
+import { useEffect, useRef } from 'react';
 
 export default function Hero() {
+  const viewerRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    // Attempt to remove the logo from the shadow DOM
+    const timer = setInterval(() => {
+      if (viewerRef.current?.shadowRoot) {
+        const logo = viewerRef.current.shadowRoot.querySelector('#logo');
+        if (logo) {
+          logo.remove();
+          clearInterval(timer);
+        }
+      }
+    }, 100);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="relative w-full min-h-screen flex items-center overflow-hidden pt-24 pb-16 bg-surface">
       {/* Background Spline Scene */}
       <div className="absolute inset-0 z-0 pointer-events-auto">
-        <spline-viewer url="https://prod.spline.design/zA-Wp5ys1AoJhU-y/scene.splinecode"></spline-viewer>
+        <spline-viewer ref={viewerRef} url="https://prod.spline.design/zA-Wp5ys1AoJhU-y/scene.splinecode"></spline-viewer>
       </div>
 
       {/* White Backlight Glow */}
