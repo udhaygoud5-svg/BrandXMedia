@@ -59,21 +59,21 @@ export default function ContactForm() {
           </div>
         </div>
 
-        <div className="bg-[#1b1b1b]/70 backdrop-blur-xl p-8 lg:p-12 rounded-2xl relative border border-outline-variant/20 shadow-2xl">
+        <div className="bg-surface-container-low/70 backdrop-blur-xl p-8 lg:p-12 rounded-2xl relative border border-on-surface/5 shadow-2xl">
           <div className="absolute -inset-1 bg-gradient-to-r from-primary-container to-primary opacity-10 blur-3xl rounded-2xl -z-10"></div>
           
           <form onSubmit={handleSubmit} className="space-y-8">
             <div>
               <label className="block text-[10px] uppercase tracking-widest text-on-surface-variant mb-2 font-bold">Full Name</label>
-              <input name="name" type="text" required className="w-full bg-surface border-none border-b border-outline-variant/30 focus:border-primary focus:ring-0 text-on-surface p-4 transition-all placeholder:text-on-surface-variant/30" placeholder="John Doe" />
+              <input name="name" type="text" required className="w-full bg-surface-container-high border-none border-b border-on-surface/10 focus:border-primary focus:ring-0 text-on-surface p-4 transition-all placeholder:text-on-surface-variant/30" placeholder="John Doe" />
             </div>
             <div>
               <label className="block text-[10px] uppercase tracking-widest text-on-surface-variant mb-2 font-bold">Work Email</label>
-              <input name="email" type="email" required className="w-full bg-surface border-none border-b border-outline-variant/30 focus:border-primary focus:ring-0 text-on-surface p-4 transition-all placeholder:text-on-surface-variant/30" placeholder="john@company.com" />
+              <input name="email" type="email" required className="w-full bg-surface-container-high border-none border-b border-on-surface/10 focus:border-primary focus:ring-0 text-on-surface p-4 transition-all placeholder:text-on-surface-variant/30" placeholder="john@company.com" />
             </div>
             <div>
               <label className="block text-[10px] uppercase tracking-widest text-on-surface-variant mb-2 font-bold">How can we help?</label>
-              <textarea name="message" required className="w-full bg-surface border-none border-b border-outline-variant/30 focus:border-primary focus:ring-0 text-on-surface p-4 transition-all placeholder:text-on-surface-variant/30 h-24 resize-none" placeholder="Tell us about your project..."></textarea>
+              <textarea name="message" required className="w-full bg-surface-container-high border-none border-b border-on-surface/10 focus:border-primary focus:ring-0 text-on-surface p-4 transition-all placeholder:text-on-surface-variant/30 h-24 resize-none" placeholder="Tell us about your project..."></textarea>
             </div>
             <button type="submit" disabled={loading} className="w-full bg-primary-container text-on-primary-container py-5 rounded-md font-bold text-xl hover:scale-[0.98] transition-all flex items-center justify-center gap-3 group shadow-[0_0_40px_-10px_rgba(46,91,255,0.4)]">
               {loading ? 'Processing...' : 'Launch My Audit'}
