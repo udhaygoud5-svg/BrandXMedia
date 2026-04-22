@@ -1,76 +1,50 @@
 "use client";
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 interface SplinePlayerProps {
   scene: string;
   className?: string;
-  onLoad?: (app: any) => void;
 }
 
 /**
- * A robust Spline player using @splinetool/runtime.
- * Optimized to handle Next.js client-side rendering.
+ * A production-grade Spline player using the official <spline-viewer> web component.
+ * This is the most stable way to render Spline scenes in Next.js/Vercel.
  */
-export default function SplinePlayer({ scene, className, onLoad }: SplinePlayerProps) {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+export default function SplinePlayer({ scene, className }: SplinePlayerProps) {
   const [isLoading, setIsLoading] = useState(true);
+  const [scriptLoaded, setScriptLoaded] = useState(false);
 
   useEffect(() => {
-    let app: any = null;
-    let isMounted = true;
-
-    async function init() {
-      if (!canvasRef.current) return;
-
-      try {
-        const { Application } = await import('@splinetool/runtime');
-        
-        if (!isMounted || !canvasRef.current) return;
-
-        app = new Application(canvasRef.current, { renderMode: 'continuous' });
-        
-        await app.load(scene);
-        
-        if (!isMounted) {
-          app.dispose();
-          return;
-        }
-
-        setIsLoading(false);
-        if (onLoad) onLoad(app);
-      } catch (err: any) {
-        console.error('Spline initialization error:', err);
-        if (isMounted) {
-          setIsLoading(false);
-        }
-      }
+    // Load the Spline viewer script only once
+    if (typeof window !== 'undefined' && !document.querySelector('script[src*="spline-viewer"]')) {
+      const script = document.createElement('script');
+      script.type = 'module';
+      script.src = 'https://unpkg.com/@splinetool/viewer@1.9.0/build/spline-viewer.js';
+      script.onload = () => setScriptLoaded(true);
+      document.head.appendChild(script);
+    } else if (typeof window !== 'undefined') {
+      setScriptLoaded(true);
     }
-
-    const timer = setTimeout(init, 100);
-
-    return () => {
-      isMounted = false;
-      clearTimeout(timer);
-      if (app) {
-        try {
-          app.dispose();
-        } catch (e) {}
-      }
-    };
-  }, [scene]);
+  }, []);
 
   return (
     <div className={`relative ${className}`} style={{ width: '100%', height: '100%' }}>
       {isLoading && (
-        <div className="absolute inset-0 flex items-center justify-center bg-surface/20 backdrop-blur-sm z-10">
-          <div className="w-10 h-10 border-4 border-primary/20 border-t-primary rounded-full animate-spin" />
+        <div className="absolute inset-0 flex items-center justify-center bg-black/20 backdrop-blur-sm z-10 pointer-events-none">
+          <div className="w-10 h-10 border-4 border-blue-500/20 border-t-blue-500 rounded-full animate-spin" />
         </div>
       )}
       
-      <canvas 
-        ref={canvasRef} 
-        className={`w-full h-full block transition-opacity duration-1000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
-      />
+      {scriptLoaded && (
+        <div className={`w-full h-full transition-opacity duration-1000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
+          {/* @ts-ignore */}
+          <spline-viewer 
+            url={scene}
+            onLoad={() => setIsLoading(false)}
+            style={{ width: '100%', height: '100%' }}
+          />
+        </div>
+      )}
     </div>
   );
 }
