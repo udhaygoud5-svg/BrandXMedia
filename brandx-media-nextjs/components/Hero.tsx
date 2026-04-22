@@ -7,7 +7,7 @@ export default function Hero() {
     <section className="relative w-full min-h-screen flex items-center overflow-hidden pt-24 pb-16">
       {/* Background Spline Scene */}
       <div className="absolute inset-0 z-0 pointer-events-auto">
-        <Spline scene="https://prod.spline.design/6Wq1Q7YGyM-iab9i/scene.splinecode" />
+        <Spline scene="https://prod.spline.design/vw6hp5jbZ2R3I5pX/scene.splinecode" />
       </div>
 
       {/* Hero Content */}
