@@ -266,15 +266,15 @@ const BrochurePage = () => {
         </div>
       </section>
 
-      {/* 📞 Page 9 — Contact Page */}
+      {/* 📞 Page 9 — Ready to Grow Section */}
       <section className="min-h-screen flex flex-col items-center justify-center px-8 py-32 bg-primary text-on-primary text-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
         >
-          <span className="label-md text-on-primary-container tracking-[0.2em] uppercase mb-8 block">Let&apos;s Build Your Brand</span>
+          <span className="label-md text-on-primary-container tracking-[0.2em] uppercase mb-8 block">Next Steps</span>
           <h2 className="text-7xl md:text-9xl font-black tracking-tighter mb-16 leading-none">
-            Ready to grow? <br/> Let&apos;s talk.
+            Ready to Grow <br/>Your Brand?
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">

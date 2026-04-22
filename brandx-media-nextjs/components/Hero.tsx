@@ -10,6 +10,9 @@ export default function Hero() {
         <Spline scene="https://prod.spline.design/vw6hp5jbZ2R3I5pX/scene.splinecode" />
       </div>
 
+      {/* White Backlight Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100vw] h-[100vh] bg-white/10 blur-[120px] rounded-full pointer-events-none z-0" />
+
       {/* Hero Content */}
       <div className="relative z-10 w-full max-w-[1440px] mx-auto px-8 pointer-events-none">
         <motion.div 

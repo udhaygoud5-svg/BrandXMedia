@@ -140,22 +140,24 @@ export default function ScrollSections() {
       </section>
 
       {/* ═══ TESTIMONIALS ═══ */}
-      <section className="py-32 bg-surface-container-low">
-        <div className="max-w-[1440px] mx-auto px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((t, i) => (
-              <div key={i} className="p-10 bg-surface flex flex-col justify-between h-full rounded-lg">
-                <p className="text-xl leading-relaxed italic text-on-surface-variant">
-                  &ldquo;{t.content || t.quote}&rdquo;
-                </p>
-                <div className="mt-12">
-                  <p className="font-bold">{t.name}</p>
-                  <p className="text-sm text-primary uppercase tracking-widest">{t.role}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+      <section className="py-32 bg-surface-container-low overflow-hidden">
+        <div className="max-w-[1440px] mx-auto px-8 mb-16">
+          <span className="label-md tracking-widest uppercase text-primary">Testimonials</span>
+          <h2 className="text-5xl font-black tracking-tighter mt-4">Trusted by Industry Leaders</h2>
         </div>
+        <Marquee speed="slow">
+          {testimonials.map((t, i) => (
+            <div key={i} className="p-10 bg-surface flex flex-col justify-between w-[400px] h-[300px] rounded-lg mx-4 border border-on-surface/5">
+              <p className="text-lg leading-relaxed italic text-on-surface-variant">
+                &ldquo;{t.content || t.quote}&rdquo;
+              </p>
+              <div className="mt-8">
+                <p className="font-bold">{t.name}</p>
+                <p className="text-sm text-primary uppercase tracking-widest">{t.role}</p>
+              </div>
+            </div>
+          ))}
+        </Marquee>
       </section>
 
       {/* ═══ FINAL CTA ═══ */}
