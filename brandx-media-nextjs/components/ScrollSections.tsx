@@ -1,5 +1,6 @@
 "use client";
 import Services from './Services';
+import { Marquee } from './ScrollAnimations';
 import { supabase } from '@/lib/supabase/client';
 import { useState, useEffect } from 'react';
 
@@ -54,13 +55,13 @@ export default function ScrollSections() {
         <p className="text-center label-md tracking-widest uppercase text-on-surface-variant mb-10">
           Trusted by growing businesses and startups
         </p>
-        <div className="flex flex-wrap justify-center gap-12 opacity-40">
+        <Marquee speed="normal">
           {logos.map((logo, i) => (
-            <span key={i} className="text-2xl font-black tracking-tighter text-on-surface-variant hover:text-primary transition-colors duration-300 cursor-default">
+            <span key={i} className="text-2xl font-black tracking-tighter text-on-surface-variant/40 hover:text-primary transition-colors duration-300 cursor-default mx-12">
               {logo}
             </span>
           ))}
-        </div>
+        </Marquee>
       </section>
 
       {/* ═══ SERVICES ═══ */}
