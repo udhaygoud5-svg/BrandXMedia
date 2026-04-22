@@ -16,14 +16,36 @@ export default function ContactForm() {
     const data = Object.fromEntries(formData.entries());
 
     try {
+      // 1. Store in Supabase (Primary Database)
       const { error } = await supabase.from('inquiries').insert([
         {
           name: data.name,
           email: data.email,
+          phone: data.phone,
           message: data.message,
         }
       ]);
       if (error) throw error;
+
+      // 2. Send to Google Sheets (Secondary Lead Management)
+      const googleSheetsUrl = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_URL;
+      if (googleSheetsUrl) {
+        // We use no-cors because Google Apps Script can be tricky with preflight requests
+        fetch(googleSheetsUrl, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name: data.name,
+            email: data.email,
+            phone: data.phone,
+            message: data.message,
+          }),
+        }).catch(err => console.error('Google Sheets Error:', err));
+      }
+
       setStatus({ msg: '🚀 Audit request received! We will be in touch within 48 hours.', type: 'success' });
       (e.target as HTMLFormElement).reset();
     } catch (err: any) {
@@ -77,6 +99,10 @@ export default function ContactForm() {
             <div>
               <label className="block text-[10px] uppercase tracking-widest text-on-surface-variant mb-2 font-bold">Work Email</label>
               <input name="email" type="email" required className="w-full bg-surface-container-high border-none border-b border-on-surface/10 focus:border-primary focus:ring-0 text-on-surface p-4 transition-all placeholder:text-on-surface-variant/30" placeholder="john@company.com" />
+            </div>
+            <div>
+              <label className="block text-[10px] uppercase tracking-widest text-on-surface-variant mb-2 font-bold">Phone Number</label>
+              <input name="phone" type="tel" required className="w-full bg-surface-container-high border-none border-b border-on-surface/10 focus:border-primary focus:ring-0 text-on-surface p-4 transition-all placeholder:text-on-surface-variant/30" placeholder="+91 98765 43210" />
             </div>
             <div>
               <label className="block text-[10px] uppercase tracking-widest text-on-surface-variant mb-2 font-bold">How can we help?</label>

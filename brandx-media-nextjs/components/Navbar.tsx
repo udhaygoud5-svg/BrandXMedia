@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import ThemeToggle from "./ThemeToggle";
+
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +18,7 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-4">
-          <ThemeToggle />
+
           <a href="#contact" className="hidden md:inline-block bg-primary-container text-on-primary-container px-6 py-3 rounded-md font-semibold text-sm hover:scale-95 transition-all duration-200">
             Get in Touch
           </a>
