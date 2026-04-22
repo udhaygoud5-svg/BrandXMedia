@@ -4,14 +4,14 @@ import { motion } from 'framer-motion';
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-screen flex items-center overflow-hidden pt-24 pb-16">
+    <section className="relative w-full min-h-screen flex items-center overflow-hidden pt-24 pb-16 bg-surface">
       {/* Background Spline Scene */}
       <div className="absolute inset-0 z-0 pointer-events-auto">
         <Spline scene="https://prod.spline.design/vw6hp5jbZ2R3I5pX/scene.splinecode" />
       </div>
 
       {/* White Backlight Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100vw] h-[100vh] bg-white/10 blur-[120px] rounded-full pointer-events-none z-0" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120vw] h-[120vh] bg-white/20 blur-[160px] rounded-full pointer-events-none z-0 opacity-50" />
 
       {/* Hero Content */}
       <div className="relative z-10 w-full max-w-[1440px] mx-auto px-8 pointer-events-none">
