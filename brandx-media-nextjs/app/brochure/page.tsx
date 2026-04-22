@@ -281,12 +281,15 @@ const BrochurePage = () => {
             <div className="flex flex-col items-center">
               <span className="material-symbols-outlined text-4xl mb-4">call</span>
               <p className="text-xl font-bold uppercase tracking-widest">Phone</p>
-              <p className="opacity-80">+91 [Your Number]</p>
+              <div className="flex flex-col gap-1 items-center opacity-80 mt-2">
+                <a href="tel:+919347047827" className="hover:text-on-primary-container transition-colors">+91 93470 47827</a>
+                <a href="tel:+919347651574" className="hover:text-on-primary-container transition-colors">+91 93476 51574</a>
+              </div>
             </div>
             <div className="flex flex-col items-center">
               <span className="material-symbols-outlined text-4xl mb-4">mail</span>
               <p className="text-xl font-bold uppercase tracking-widest">Email</p>
-              <p className="opacity-80 lowercase">hello@brandxmedia.com</p>
+              <p className="opacity-80 lowercase">brandxmedia.co@gmail.com</p>
             </div>
             <div className="flex flex-col items-center">
               <span className="material-symbols-outlined text-4xl mb-4">camera</span>
@@ -301,7 +304,7 @@ const BrochurePage = () => {
           </div>
           
           <a 
-            href="mailto:hello@brandxmedia.com" 
+            href="mailto:brandxmedia.co@gmail.com" 
             className="inline-block bg-on-primary text-primary px-16 py-8 rounded-full font-black text-2xl uppercase tracking-tighter hover:scale-105 transition-all shadow-2xl"
           >
             Start Your Journey

@@ -24,7 +24,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center px-8 max-w-[1440px] mx-auto gap-4">
             <div className="flex items-center gap-8">
               <span className="font-bold text-on-surface">BrandXMedia</span>
-              <a href="mailto:hello@brandxmedia.com" className="hover:text-primary transition-colors lowercase tracking-normal">hello@brandxmedia.com</a>
+              <a href="mailto:brandxmedia.co@gmail.com" className="hover:text-primary transition-colors lowercase tracking-normal">brandxmedia.co@gmail.com</a>
             </div>
             <p>© 2026 BrandXMedia. All rights reserved.</p>
           </div>
