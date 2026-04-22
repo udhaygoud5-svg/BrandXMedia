@@ -1,13 +1,13 @@
 "use client";
 import { motion } from 'framer-motion';
-import Spline from '@splinetool/react-spline';
+import { SplineScene } from './SplineScene';
 
 export default function Hero() {
   return (
     <section className="relative w-full min-h-screen flex items-center overflow-hidden pt-24 pb-16 bg-surface">
       {/* Background Spline Scene */}
       <div className="absolute inset-0 z-0 pointer-events-auto">
-        <Spline scene="https://prod.spline.design/vw6hp5jbZ2R3I5pX/scene.splinecode" />
+        <SplineScene scene="https://prod.spline.design/vw6hp5jbZ2R3I5pX/scene.splinecode" className="w-full h-full" />
       </div>
 
       {/* White Backlight Glow */}

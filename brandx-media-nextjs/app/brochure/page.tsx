@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
-import Spline from '@splinetool/react-spline';
+import { SplineScene } from '@/components/SplineScene';
 
 const BrochurePage = () => {
   return (
@@ -12,7 +12,7 @@ const BrochurePage = () => {
       {/* 🎯 Page 1 — Cover Page */}
       <section className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-8">
         <div className="absolute inset-0 z-0 pointer-events-none opacity-60">
-          <Spline scene="https://prod.spline.design/vw6hp5jbZ2R3I5pX/scene.splinecode" />
+          <SplineScene scene="https://prod.spline.design/vw6hp5jbZ2R3I5pX/scene.splinecode" className="w-full h-full" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-surface/20 via-transparent to-surface pointer-events-none z-1" />
         
