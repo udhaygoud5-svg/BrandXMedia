@@ -20,19 +20,10 @@ export default function Home() {
         <ContactForm />
 
         {/* Footer */}
-        <footer className="w-full py-16 bg-[#1b1b1b] font-['Inter'] text-sm uppercase tracking-widest">
-          <div className="flex flex-col md:flex-row justify-between items-center px-8 max-w-[1440px] mx-auto">
-            <div className="mb-8 md:mb-0">
-              <span className="text-lg font-black text-[#e2e2e2]">BrandXMedia</span>
-              <p className="mt-2 normal-case tracking-normal text-[#c4c5d9] opacity-80">Curating digital excellence.</p>
-            </div>
-            <div className="flex flex-wrap justify-center gap-8 mb-8 md:mb-0">
-              <a className="text-[#c4c5d9] hover:text-[#2e5bff] transition-all duration-300" href="#">Privacy Policy</a>
-              <a className="text-[#c4c5d9] hover:text-[#2e5bff] transition-all duration-300" href="#">Terms of Service</a>
-              <a className="text-[#c4c5d9] hover:text-[#2e5bff] transition-all duration-300" href="#">LinkedIn</a>
-              <a className="text-[#c4c5d9] hover:text-[#2e5bff] transition-all duration-300" href="#">Instagram</a>
-            </div>
-            <p className="text-[#c4c5d9] normal-case tracking-normal opacity-60">© 2026 BrandXMedia.</p>
+        <footer className="w-full py-8 bg-[#131313] border-t border-white/5 text-xs uppercase tracking-widest text-[#c4c5d9] opacity-60">
+          <div className="flex flex-col md:flex-row justify-between items-center px-8 max-w-[1440px] mx-auto gap-4">
+            <span className="font-bold text-white">BrandXMedia</span>
+            <p>© 2026 BrandXMedia. All rights reserved.</p>
           </div>
         </footer>
       </main>
