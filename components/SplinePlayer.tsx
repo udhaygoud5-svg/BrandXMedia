@@ -16,6 +16,13 @@ export default function SplinePlayer({ scene, className, onLoad }: SplinePlayerP
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
 
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 6000);
+    return () => clearTimeout(timer);
+  }, []);
+
   const handleLoad = (splineApp: any) => {
     setIsLoading(false);
     if (onLoad) {

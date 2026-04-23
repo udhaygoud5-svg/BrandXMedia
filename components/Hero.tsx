@@ -27,16 +27,14 @@ export default function Hero() {
       </div>
 
       {/* 🎨 3D Spline Scene - Optimized for different devices */}
-      {isClient && (
-        <div className="absolute inset-0 z-[1] pointer-events-auto opacity-100 flex items-center justify-center">
-          <div className="w-full h-full scale-[1.2] md:scale-100 transition-transform duration-1000">
-            <SplinePlayer 
-              scene="https://prod.spline.design/zA-Wp5ys1AoJhU-y/scene.splinecode" 
-              className="w-full h-full"
-            />
-          </div>
+      <div className="absolute inset-0 z-[1] pointer-events-auto flex items-center justify-center">
+        <div className="w-full h-full scale-[1.2] md:scale-100 transition-transform duration-1000">
+          <SplinePlayer 
+            scene="https://prod.spline.design/zA-Wp5ys1AoJhU-y/scene.splinecode" 
+            className="w-full h-full"
+          />
         </div>
-      )}
+      </div>
 
       {/* Responsive Backlight Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150vw] md:w-[120vw] h-[120vh] bg-white/5 md:bg-white/10 blur-[100px] md:blur-[160px] rounded-full pointer-events-none z-[2] opacity-20 md:opacity-30" />

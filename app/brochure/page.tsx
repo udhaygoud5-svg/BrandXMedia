@@ -31,14 +31,13 @@ const BrochurePage = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(46,91,255,0.1),transparent_70%)]" />
         </div>
 
-        {isClient && (
-          <div className="absolute inset-0 z-[1] pointer-events-auto opacity-70">
-            <SplinePlayer 
-              scene="https://prod.spline.design/zA-Wp5ys1AoJhU-y/scene.splinecode" 
-              className="w-full h-full"
-            />
-          </div>
-        )}
+        {/* 🎨 3D Spline Scene */}
+        <div className="absolute inset-0 z-[1] pointer-events-auto opacity-70">
+          <SplinePlayer 
+            scene="https://prod.spline.design/zA-Wp5ys1AoJhU-y/scene.splinecode" 
+            className="w-full h-full"
+          />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-b from-surface/20 via-transparent to-surface pointer-events-none z-[2]" />
         
         <motion.div 
