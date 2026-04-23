@@ -1,7 +1,16 @@
 "use client";
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import SplinePlayer from './SplinePlayer';
+import dynamic from 'next/dynamic';
+
+const SplinePlayer = dynamic(() => import('./SplinePlayer'), {
+  ssr: false,
+  loading: () => (
+    <div className="absolute inset-0 flex items-center justify-center bg-black/5 backdrop-blur-sm z-10">
+      <div className="w-10 h-10 border-4 border-primary/20 border-t-primary rounded-full animate-spin" />
+    </div>
+  )
+});
 
 export default function Hero() {
   const [isClient, setIsClient] = useState(false);
