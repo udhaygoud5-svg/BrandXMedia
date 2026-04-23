@@ -14,6 +14,7 @@ interface SplinePlayerProps {
  */
 export default function SplinePlayer({ scene, className, onLoad }: SplinePlayerProps) {
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<Error | null>(null);
 
   const handleLoad = (splineApp: any) => {
     setIsLoading(false);
@@ -21,6 +22,20 @@ export default function SplinePlayer({ scene, className, onLoad }: SplinePlayerP
       onLoad(splineApp);
     }
   };
+
+  const handleError = (err: any) => {
+    console.error('Spline Runtime Error:', err);
+    setError(err);
+    setIsLoading(false);
+  };
+
+  if (error) {
+    return (
+      <div className={`flex items-center justify-center bg-surface-container ${className}`}>
+        <p className="text-on-surface-variant text-sm opacity-50">Unable to load 3D scene</p>
+      </div>
+    );
+  }
 
   return (
     <div className={`relative ${className}`} style={{ width: '100%', height: '100%' }}>
@@ -34,6 +49,7 @@ export default function SplinePlayer({ scene, className, onLoad }: SplinePlayerP
         <Spline 
           scene={scene} 
           onLoad={handleLoad}
+          onError={handleError}
         />
       </div>
     </div>

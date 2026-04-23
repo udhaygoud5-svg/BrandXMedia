@@ -12,6 +12,7 @@ const nextConfig = {
       },
     ],
   },
+  transpilePackages: ['three', '@splinetool/react-spline', '@splinetool/runtime'],
 }
 
 module.exports = nextConfig
