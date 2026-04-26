@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   metadataBase: new URL('https://brandxmedia.co'),
   title: 'BrandXMedia | Premium Digital Agency',
-  description: 'Strategy-led digital excellence. We build brands that generate revenue through high-converting websites, branding, and AI-powered growth systems.',
+  description: 'Strategy-led digital excellence. We build brands that generate revenue through high-converting websites, branding, and automation growth systems.',
   openGraph: {
     title: 'BrandXMedia | Premium Digital Agency',
     description: 'Strategy-led digital excellence for ambitious brands.',
