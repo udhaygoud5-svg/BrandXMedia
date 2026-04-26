@@ -148,58 +148,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. CASE STUDIES / RESULTS */}
-      <section id="work" className="py-40 px-8 bg-surface">
-        <div className="max-w-[1440px] mx-auto">
-          <h2 className="text-5xl md:text-7xl font-black tracking-tighter text-center mb-24">Real Results</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="p-10 rounded-3xl bg-surface-container-low border border-on-surface/5 flex flex-col"
-            >
-              <h3 className="text-2xl font-bold mb-8 text-on-surface-variant">Local Business</h3>
-              <div className="space-y-4 flex-grow flex flex-col justify-center">
-                <div className="p-6 rounded-2xl bg-on-surface/5">
-                  <p className="text-sm uppercase tracking-widest text-on-surface-variant mb-2">Before</p>
-                  <p className="font-bold text-xl">No online leads</p>
-                </div>
-                <div className="p-6 rounded-2xl bg-primary/10 border border-primary/20">
-                  <p className="text-sm uppercase tracking-widest text-primary mb-2">After</p>
-                  <p className="text-3xl font-black text-primary">50+ leads/month</p>
-                </div>
-              </div>
-            </motion.div>
 
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="p-10 rounded-3xl bg-surface-container-low border border-on-surface/5 flex flex-col"
-            >
-              <h3 className="text-2xl font-bold mb-8 text-on-surface-variant">Restaurant</h3>
-              <div className="flex-grow flex items-center justify-center p-6 rounded-2xl bg-primary/10 border border-primary/20">
-                <p className="text-3xl font-bold leading-tight text-center text-primary">More orders with instant WhatsApp replies</p>
-              </div>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="p-10 rounded-3xl bg-surface-container-low border border-on-surface/5 flex flex-col"
-            >
-              <h3 className="text-2xl font-bold mb-8 text-on-surface-variant">Gym</h3>
-              <div className="flex-grow flex items-center justify-center p-6 rounded-2xl bg-primary/10 border border-primary/20">
-                <p className="text-3xl font-bold leading-tight text-center text-primary">Automated enquiry system <br/><span className="text-on-surface">→ more memberships</span></p>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
 
       {/* WHY CHOOSE US SECTION */}
       <section id="why-us" className="py-40 px-8 bg-surface-container-low border-y border-on-surface/5">

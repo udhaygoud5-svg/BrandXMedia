@@ -12,7 +12,7 @@ export default function Navbar() {
         <a className="text-xl font-bold tracking-tighter text-on-surface uppercase" href="/">BrandXMedia</a>
         
         <div className="hidden md:flex items-center gap-10">
-          <a className="text-on-surface-variant hover:text-primary transition-colors duration-300 text-sm font-medium tracking-widest uppercase" href="#work">Work</a>
+
           <a className="text-on-surface-variant hover:text-primary transition-colors duration-300 text-sm font-medium tracking-widest uppercase" href="#services">Services</a>
           <a className="text-on-surface-variant hover:text-primary transition-colors duration-300 text-sm font-medium tracking-widest uppercase" href="#about">About</a>
         </div>
@@ -32,7 +32,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="fixed inset-0 top-[88px] bg-surface z-40 p-8 md:hidden flex flex-col gap-8 text-2xl font-bold tracking-tighter uppercase animate-in slide-in-from-right duration-500">
-          <a href="#work" onClick={() => setIsOpen(false)}>Work</a>
+
           <a href="#services" onClick={() => setIsOpen(false)}>Services</a>
           <a href="#about" onClick={() => setIsOpen(false)}>About</a>
           <a href="#contact" onClick={() => setIsOpen(false)} className="bg-primary-container text-on-primary-container px-6 py-3 rounded-md font-semibold text-sm w-full text-center inline-block">
