@@ -3,3 +3,8 @@ declare namespace JSX {
     'spline-viewer': any;
   }
 }
+
+declare module '@splinetool/react-spline/next' {
+  const Spline: any;
+  export default Spline;
+}
