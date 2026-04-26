@@ -57,6 +57,27 @@ export default function Home() {
         </div>
       </section>
 
+      {/* MISSION SECTION */}
+      <section className="py-32 px-8 bg-surface border-t border-on-surface/5">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-sm uppercase tracking-widest text-primary font-bold mb-8"
+          >
+            Our Mission
+          </motion.p>
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-8">
+            To empower every business with world-class digital tools, creative branding, and intelligent automation.
+          </h2>
+          <div className="w-20 h-1 bg-primary mx-auto mb-8" />
+          <p className="text-xl text-on-surface-variant font-medium">
+            We build solutions engineered for today and tomorrow.
+          </p>
+        </div>
+      </section>
+
       {/* 3. SERVICES -> OUTCOMES */}
       <section id="services" className="py-40 px-8 bg-surface">
         <div className="max-w-[1440px] mx-auto">
@@ -176,6 +197,32 @@ export default function Home() {
                 <p className="text-3xl font-bold leading-tight text-center text-primary">Automated enquiry system <br/><span className="text-on-surface">→ more memberships</span></p>
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* WHY CHOOSE US SECTION */}
+      <section id="why-us" className="py-40 px-8 bg-surface-container-low border-y border-on-surface/5">
+        <div className="max-w-[1440px] mx-auto text-center">
+          <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-24 text-primary">Why Choose Us?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {[
+              { title: "End-to-End Solutions", text: "Web, branding, and automation all under one roof." },
+              { title: "Results-Focused", text: "Every decision is tied directly to your business goals." },
+              { title: "Modern & Scalable", text: "Systems engineered to grow as your business grows." },
+              { title: "Tailored Strategies", text: "No templates. Every strategy is custom-built for you." }
+            ].map((item, i) => (
+              <motion.div 
+                key={i}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                className="p-10 rounded-3xl bg-surface border border-on-surface/5 text-left hover:border-primary/30 transition-colors"
+              >
+                <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
+                <p className="text-lg text-on-surface-variant font-medium">{item.text}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
