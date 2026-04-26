@@ -1,5 +1,6 @@
 "use client";
 import BrochureNavbar from '@/components/BrochureNavbar';
+import ContactForm from '@/components/ContactForm';
 import { motion } from 'framer-motion';
 
 export default function BrochurePage() {
@@ -8,7 +9,7 @@ export default function BrochurePage() {
       <BrochureNavbar />
 
       {/* 1. HERO SECTION */}
-      <section className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-8 pt-20">
+      <section id="cover" className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-8 pt-20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(46,91,255,0.15),transparent_70%)] pointer-events-none" />
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -35,7 +36,7 @@ export default function BrochurePage() {
       </section>
 
       {/* 2. PROBLEM SECTION */}
-      <section className="py-32 px-8 bg-surface-container-low border-t border-on-surface/5">
+      <section id="about" className="py-32 px-8 bg-surface-container-low border-t border-on-surface/5">
         <div className="max-w-5xl mx-auto text-center">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
@@ -57,7 +58,7 @@ export default function BrochurePage() {
       </section>
 
       {/* 3. SERVICES -> OUTCOMES */}
-      <section className="py-40 px-8 bg-surface">
+      <section id="services-overview" className="py-40 px-8 bg-surface">
         <div className="max-w-[1440px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
@@ -97,7 +98,7 @@ export default function BrochurePage() {
       </section>
 
       {/* 4. HOW IT WORKS */}
-      <section className="py-40 px-8 bg-surface-container-lowest border-y border-on-surface/5 relative overflow-hidden">
+      <section id="process" className="py-40 px-8 bg-surface-container-lowest border-y border-on-surface/5 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
         <div className="max-w-[1440px] mx-auto relative z-10">
           <h2 className="text-5xl md:text-7xl font-black tracking-tighter text-center mb-24">How It Works</h2>
@@ -127,7 +128,7 @@ export default function BrochurePage() {
       </section>
 
       {/* 5. CASE STUDIES / RESULTS */}
-      <section className="py-40 px-8 bg-surface">
+      <section id="why-us" className="py-40 px-8 bg-surface">
         <div className="max-w-[1440px] mx-auto">
           <h2 className="text-5xl md:text-7xl font-black tracking-tighter text-center mb-24">Real Results</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -180,28 +181,7 @@ export default function BrochurePage() {
       </section>
 
       {/* 6. CTA SECTION */}
-      <section className="py-40 px-8 bg-surface-container-lowest border-t border-on-surface/5 text-center relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 blur-[120px] rounded-full pointer-events-none" />
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="max-w-4xl mx-auto relative z-10"
-        >
-          <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-16">
-            Start growing your business today.
-          </h2>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <a href="mailto:brandxmedia.co@gmail.com" className="w-full sm:w-auto text-center bg-primary text-on-primary px-12 py-6 rounded-full font-bold text-xl hover:bg-primary/90 transition-all shadow-[0_0_40px_-10px_rgba(46,91,255,0.5)]">
-              Get Free Demo
-            </a>
-            <a href="https://wa.me/919347047827?text=Hi,%20I%20want%20to%20grow%20my%20business" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto flex items-center justify-center gap-2 border border-on-surface/20 hover:border-primary/50 bg-surface px-12 py-6 rounded-full font-bold text-xl transition-all">
-              <span className="material-symbols-outlined text-[#25D366]">chat</span>
-              Chat on WhatsApp
-            </a>
-          </div>
-        </motion.div>
-      </section>
+      <ContactForm />
 
       {/* Footer */}
       <footer className="w-full py-12 bg-surface text-center border-t border-on-surface/5 relative z-10">
