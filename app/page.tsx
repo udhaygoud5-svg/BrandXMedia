@@ -69,19 +69,19 @@ export default function Home() {
           <div className="flex flex-col">
             {[
               {
-                title: "Website & Software Solutions",
+                title: "Web & Software Solutions",
                 tagline: "Turn your website into a 24/7 sales machine",
-                desc: "Stop bleeding money on ads that lead nowhere. We design sites that convert cold traffic into booked calls without you lifting a finger."
+                desc: "Custom websites, high-converting landing pages, and business management systems that turn visitors into paying customers."
               },
               {
                 title: "Automation Systems",
                 tagline: "Run your business on autopilot",
-                desc: "WhatsApp chatbots, email systems, and CRM integrations that capture leads and close sales while you sleep. Maximum efficiency, zero effort."
+                desc: "WhatsApp chatbots, email automation, and CRM systems that capture leads and close sales while you sleep. Maximum efficiency, zero effort."
               },
               {
                 title: "Branding & Social",
                 tagline: "Look like you charge what you're worth",
-                desc: "Generic brand = commodity pricing. We create visual identities and social strategies that let you charge 2x-3x more than competitors."
+                desc: "Bold visual identities, Instagram growth strategies, and high-impact content designed to turn your followers into loyal customers."
               }
             ].map((service, i) => (
               <motion.div 
