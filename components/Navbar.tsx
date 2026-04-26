@@ -9,7 +9,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl font-['Inter'] tracking-tight border-b border-on-surface/5">
       <div className="flex justify-between items-center px-8 py-6 max-w-[1440px] mx-auto w-full">
-        <a className="text-xl font-bold tracking-tighter text-on-surface uppercase" href="#">BrandXMedia</a>
+        <a className="text-xl font-bold tracking-tighter text-on-surface uppercase" href="/">BrandXMedia</a>
         
         <div className="hidden md:flex items-center gap-10">
           <a className="text-on-surface-variant hover:text-primary transition-colors duration-300 text-sm font-medium tracking-widest uppercase" href="#work">Work</a>

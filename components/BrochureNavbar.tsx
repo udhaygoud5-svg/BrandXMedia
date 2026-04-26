@@ -30,7 +30,7 @@ export default function BrochureNavbar() {
         </div>
 
         <div className="flex items-center gap-4">
-          <a href="#contact-brochure" className="hidden md:inline-block bg-primary-container text-on-primary-container px-6 py-3 rounded-md font-semibold text-sm hover:scale-95 transition-all duration-200">
+          <a href="#contact" className="hidden md:inline-block bg-primary-container text-on-primary-container px-6 py-3 rounded-md font-semibold text-sm hover:scale-95 transition-all duration-200">
             Start Journey
           </a>
 
@@ -46,7 +46,7 @@ export default function BrochureNavbar() {
           {links.map((link) => (
             <a key={link.name} href={link.href} onClick={() => setIsOpen(false)}>{link.name}</a>
           ))}
-          <a href="#contact-brochure" onClick={() => setIsOpen(false)} className="bg-primary-container text-on-primary-container px-6 py-3 rounded-md font-semibold text-sm w-full text-center inline-block">
+          <a href="#contact" onClick={() => setIsOpen(false)} className="bg-primary-container text-on-primary-container px-6 py-3 rounded-md font-semibold text-sm w-full text-center inline-block">
             Start Journey
           </a>
         </div>
