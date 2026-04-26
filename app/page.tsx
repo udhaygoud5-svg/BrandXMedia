@@ -4,6 +4,7 @@ import ContactForm from '@/components/ContactForm';
 import { motion } from 'framer-motion';
 import { ChevronDown, Check } from 'lucide-react';
 import { useState } from 'react';
+import Spline from '@splinetool/react-spline/next';
 
 export default function Home() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -13,12 +14,22 @@ export default function Home() {
       <Navbar />
 
       {/* 1. HERO SECTION */}
-      <section id="home" className="pt-48 pb-24 px-8 flex flex-col items-center text-center relative overflow-hidden">
+      <section id="home" className="min-h-screen pt-48 pb-24 px-8 flex flex-col items-center justify-center text-center relative overflow-hidden">
+        {/* 🎨 3D Spline Scene Layer */}
+        <div className="absolute inset-0 z-0 opacity-60">
+          <Spline
+            scene="https://prod.spline.design/zA-Wp5ys1AoJhU-y/scene.splinecode" 
+          />
+        </div>
+        
+        {/* Subtle Overlay to ensure text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-surface/20 via-transparent to-surface pointer-events-none z-[1]" />
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-6xl mx-auto"
+          className="max-w-6xl mx-auto relative z-10"
         >
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight leading-[1.1] mb-8 uppercase">
             Revenue-First <br/>
@@ -206,26 +217,29 @@ export default function Home() {
             Book an Intro Call
           </a>
           
-          <div className="flex flex-col md:flex-row justify-between items-end gap-12 text-left pt-20 border-t border-on-surface/5">
-            <div>
-              <h2 className="text-[8vw] font-extrabold tracking-tighter uppercase leading-[0.7] opacity-10 select-none -mb-4">BRANDXMEDIA</h2>
-              <div className="flex gap-12 mt-8">
+          <div className="pt-20 border-t border-on-surface/5">
+            <div className="flex flex-col md:flex-row justify-between items-start gap-12 text-left mb-20">
+              <div className="flex-1">
+                <h2 className="text-[12vw] font-extrabold tracking-tighter uppercase leading-[0.8] opacity-5 select-none -ml-2 mb-8">BRANDXMEDIA</h2>
+              </div>
+              <div className="flex gap-20">
                 <div className="flex flex-col gap-4">
                   <span className="label-md text-on-surface-variant">Menu</span>
-                  <a href="#home" className="font-bold uppercase tracking-tighter italic hover:text-primary transition-colors">Home</a>
-                  <a href="#services" className="font-bold uppercase tracking-tighter italic hover:text-primary transition-colors">Services</a>
-                  <a href="#contact" className="font-bold uppercase tracking-tighter italic hover:text-primary transition-colors">Contact</a>
+                  <a href="#home" className="font-bold uppercase tracking-tight hover:text-primary transition-colors">Home</a>
+                  <a href="#services" className="font-bold uppercase tracking-tight hover:text-primary transition-colors">Services</a>
+                  <a href="#contact" className="font-bold uppercase tracking-tight hover:text-primary transition-colors">Contact</a>
                 </div>
                 <div className="flex flex-col gap-4">
                   <span className="label-md text-on-surface-variant">Social</span>
-                  <a href="https://instagram.com/brandxmedia.co" target="_blank" className="font-bold uppercase tracking-tighter italic hover:text-primary transition-colors">Instagram</a>
-                  <a href="https://x.com/BrandxmediaCo" target="_blank" className="font-bold uppercase tracking-tighter italic hover:text-primary transition-colors">Twitter</a>
+                  <a href="https://instagram.com/brandxmedia.co" target="_blank" className="font-bold uppercase tracking-tight hover:text-primary transition-colors">Instagram</a>
+                  <a href="https://x.com/BrandxmediaCo" target="_blank" className="font-bold uppercase tracking-tight hover:text-primary transition-colors">Twitter</a>
                 </div>
               </div>
             </div>
-            <div className="text-right">
-              <p className="text-sm font-bold opacity-30 uppercase tracking-[0.2em] mb-4">©2026 - All Rights Reserved.</p>
-              <p className="text-xs font-bold opacity-20 uppercase tracking-widest">Designed by BrandXMedia</p>
+            
+            <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-10 border-t border-on-surface/5 text-sm font-bold opacity-40 uppercase tracking-[0.1em]">
+              <p>©2026 - All Rights Reserved.</p>
+              <p>Designed by <span className="text-on-surface opacity-100">BrandXMedia</span></p>
             </div>
           </div>
         </div>

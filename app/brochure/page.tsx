@@ -21,14 +21,14 @@ const BrochurePage = () => {
   }, []);
 
   return (
-    <main className="bg-surface text-on-surface font-['Inter'] selection:bg-primary/30">
+    <main className="bg-surface text-on-surface font-headline selection:bg-primary/30">
       <BrochureNavbar />
       
       {/* 🎯 Page 1 — Cover Page */}
       <section id="cover" className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-8">
         {/* Background Layer (Fallback for WebGL errors) */}
         <div className="absolute inset-0 bg-surface z-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(46,91,255,0.1),transparent_70%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(74,222,128,0.1),transparent_70%)]" />
         </div>
 
         {/* 🎨 3D Spline Scene */}
@@ -261,7 +261,7 @@ const BrochurePage = () => {
 
       {/* 📊 Page 8 — Why Choose Us */}
       <section id="why-us" className="min-h-screen flex items-center justify-center px-8 py-32 bg-surface-container-low border-t border-on-surface/5 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 blur-[150px] rounded-full pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/10 blur-[150px] rounded-full pointer-events-none" />
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <span className="label-md text-primary tracking-[0.2em] uppercase mb-8 block">Why Choose Us</span>
@@ -293,7 +293,7 @@ const BrochurePage = () => {
       {/* 📞 Page 9 — Ready to Grow Section */}
       <section id="contact-brochure" className="min-h-screen flex flex-col items-center justify-center px-8 py-32 bg-surface-container-lowest text-on-surface text-center relative overflow-hidden">
         {/* Subtle glow effect */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/20 blur-[120px] rounded-full pointer-events-none" />
 
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
