@@ -4,7 +4,6 @@ import ContactForm from '@/components/ContactForm';
 import { motion } from 'framer-motion';
 import { ChevronDown, Check } from 'lucide-react';
 import { useState } from 'react';
-import Spline from '@splinetool/react-spline/next';
 
 export default function Home() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -14,17 +13,7 @@ export default function Home() {
       <Navbar />
 
       {/* 1. HERO SECTION */}
-      <section id="home" className="min-h-screen pt-48 pb-24 px-8 flex flex-col items-center justify-center text-center relative overflow-hidden">
-        {/* 🎨 3D Spline Scene Layer */}
-        <div className="absolute inset-0 z-0 opacity-60">
-          <Spline
-            scene="https://prod.spline.design/zA-Wp5ys1AoJhU-y/scene.splinecode" 
-          />
-        </div>
-        
-        {/* Subtle Overlay to ensure text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-surface/20 via-transparent to-surface pointer-events-none z-[1]" />
-
+      <section id="home" className="pt-48 pb-24 px-8 flex flex-col items-center justify-center text-center relative overflow-hidden">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

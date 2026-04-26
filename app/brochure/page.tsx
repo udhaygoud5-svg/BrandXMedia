@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { motion } from 'framer-motion';
 import BrochureNavbar from '@/components/BrochureNavbar';
 import Spline from '@splinetool/react-spline/next';
@@ -24,9 +24,11 @@ const BrochurePage = () => {
 
         {/* 🎨 3D Spline Scene */}
         <div className="absolute inset-0 z-[1] pointer-events-auto opacity-70">
-          <Spline 
-            scene="https://prod.spline.design/zA-Wp5ys1AoJhU-y/scene.splinecode" 
-          />
+          <Suspense fallback={<div className="absolute inset-0 flex items-center justify-center bg-black/10 backdrop-blur-sm z-10"><div className="w-10 h-10 border-4 border-primary/20 border-t-primary rounded-full animate-spin" /></div>}>
+            <Spline 
+              scene="https://prod.spline.design/zA-Wp5ys1AoJhU-y/scene.splinecode" 
+            />
+          </Suspense>
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-surface/20 via-transparent to-surface pointer-events-none z-[2]" />
         
@@ -284,9 +286,11 @@ const BrochurePage = () => {
       <section id="contact-brochure" className="min-h-screen flex flex-col items-center justify-center px-8 py-32 bg-surface-container-lowest text-on-surface text-center relative overflow-hidden">
         {/* Subtle glow and 3D effect */}
         <div className="absolute inset-0 z-0 opacity-40">
-          <Spline 
-            scene="https://prod.spline.design/zA-Wp5ys1AoJhU-y/scene.splinecode" 
-          />
+          <Suspense fallback={null}>
+            <Spline 
+              scene="https://prod.spline.design/zA-Wp5ys1AoJhU-y/scene.splinecode" 
+            />
+          </Suspense>
         </div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/20 blur-[120px] rounded-full pointer-events-none z-[1]" />
 
