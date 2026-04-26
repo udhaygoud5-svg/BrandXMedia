@@ -208,7 +208,7 @@ export default function Home() {
           
           <div className="flex flex-col md:flex-row justify-between items-end gap-12 text-left pt-20 border-t border-on-surface/5">
             <div>
-              <h2 className="text-[12vw] font-black tracking-[-0.08em] uppercase italic leading-[0.7] opacity-10 select-none -mb-4">BRANDX</h2>
+              <h2 className="text-[10vw] font-black tracking-[-0.08em] uppercase italic leading-[0.7] opacity-10 select-none -mb-4">BRANDXMEDIA</h2>
               <div className="flex gap-12 mt-8">
                 <div className="flex flex-col gap-4">
                   <span className="label-md text-on-surface-variant">Menu</span>

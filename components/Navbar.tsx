@@ -9,7 +9,7 @@ export default function Navbar() {
     <nav className="fixed top-0 w-full z-50 bg-black/50 backdrop-blur-xl border-b border-white/5">
       <div className="flex justify-between items-center px-8 py-6 max-w-[1440px] mx-auto w-full">
         <a className="text-2xl font-black tracking-tighter text-primary uppercase italic" href="/">
-          BrandX
+          BrandXMedia
         </a>
         
         <div className="hidden md:flex items-center gap-12">
