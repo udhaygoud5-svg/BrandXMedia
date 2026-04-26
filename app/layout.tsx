@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Plus_Jakarta_Sans } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://brandxmedia.co'),
@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     ],
     locale: 'en_US',
     type: 'website',
+    images: ['/og-image.png'],
   },
   twitter: {
     card: 'summary_large_image',
@@ -46,7 +47,7 @@ export default function RootLayout({
       <head>
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
       </head>
-      <body className={`${inter.className} bg-surface text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container`}>
+      <body className={`${jakarta.className} bg-surface text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container`}>
         {children}
         <a 
           href="https://wa.me/919347047827?text=Hi,%20I%20want%20to%20grow%20my%20business" 

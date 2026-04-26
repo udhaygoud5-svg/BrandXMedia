@@ -46,10 +46,10 @@ const BrochurePage = () => {
           transition={{ duration: 1 }}
           className="text-center relative z-10"
         >
-          <h1 className="text-8xl md:text-9xl font-black tracking-tighter uppercase mb-6 bg-clip-text text-transparent bg-gradient-to-b from-on-surface to-on-surface/40">
+          <h1 className="text-6xl md:text-8xl font-extrabold tracking-tight uppercase mb-6 bg-clip-text text-transparent bg-gradient-to-b from-on-surface to-on-surface/40">
             BrandXmedia
           </h1>
-          <p className="text-xl md:text-2xl tracking-[0.3em] uppercase font-light text-primary-container">
+          <p className="text-lg md:text-xl tracking-[0.2em] uppercase font-medium text-primary-container">
             Building Brands That Grow Online
           </p>
         </motion.div>
@@ -72,7 +72,7 @@ const BrochurePage = () => {
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-6xl font-black tracking-tighter mb-12"
+            className="text-4xl md:text-5xl font-extrabold tracking-tight mb-12"
           >
             At BrandXmedia, we help businesses build a strong and impactful online presence.
           </motion.h2>
@@ -80,7 +80,7 @@ const BrochurePage = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-xl md:text-2xl text-on-surface-variant leading-relaxed font-light"
+            className="text-lg md:text-xl text-on-surface-variant leading-relaxed font-medium"
           >
             From creating stunning websites to crafting engaging brand identities and automating customer interactions, we provide end-to-end solutions that help businesses grow faster and smarter.
           </motion.p>
@@ -92,7 +92,7 @@ const BrochurePage = () => {
         <div className="max-w-[1440px] mx-auto w-full">
           <div className="text-center mb-24">
             <span className="label-md text-primary tracking-[0.2em] uppercase mb-4 block">Our Services</span>
-            <h2 className="text-6xl md:text-7xl font-black tracking-tighter">Strategic Solutions</h2>
+            <h2 className="text-5xl md:text-6xl font-extrabold tracking-tight">Strategic Solutions</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -131,10 +131,10 @@ const BrochurePage = () => {
         <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center w-full">
           <div>
             <span className="label-md text-primary tracking-[0.2em] uppercase mb-8 block">01 / Web & Software</span>
-            <h2 className="text-6xl md:text-8xl font-black tracking-tighter mb-12 leading-none">
+            <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-12 leading-none">
               Web & Software <br/> Solutions
             </h2>
-            <p className="text-2xl text-primary font-bold mb-12 italic">
+            <p className="text-xl text-primary font-bold mb-12">
               &quot;We build digital platforms that don’t just look good — they perform.&quot;
             </p>
           </div>
@@ -156,7 +156,7 @@ const BrochurePage = () => {
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
                   {i + 1}
                 </div>
-                <span className="text-xl font-medium">{item}</span>
+                <span className="text-lg font-medium">{item}</span>
               </motion.div>
             ))}
           </div>
@@ -188,10 +188,10 @@ const BrochurePage = () => {
           </div>
           <div className="order-1 lg:order-2">
             <span className="label-md text-primary tracking-[0.2em] uppercase mb-8 block">02 / Branding & Content</span>
-            <h2 className="text-6xl md:text-8xl font-black tracking-tighter mb-12 leading-none">
+            <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-12 leading-none">
               Branding & <br/> Strategy
             </h2>
-            <p className="text-2xl text-primary font-bold mb-12 italic">
+            <p className="text-xl text-primary font-bold mb-12">
               &quot;We turn your business into a brand people recognize and trust.&quot;
             </p>
           </div>
@@ -202,7 +202,7 @@ const BrochurePage = () => {
       <section className="min-h-screen flex items-center justify-center px-8 py-32 bg-surface-container-low border-t border-on-surface/5">
         <div className="max-w-4xl mx-auto text-center">
           <span className="label-md text-primary tracking-[0.2em] uppercase mb-8 block">03 / Automation</span>
-          <h2 className="text-6xl md:text-8xl font-black tracking-tighter mb-12 leading-none">
+          <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-12 leading-none">
             Smart Automation <br/> Systems
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left mb-16">
@@ -219,7 +219,7 @@ const BrochurePage = () => {
               </div>
             ))}
           </div>
-          <p className="text-3xl text-primary font-black italic">
+          <p className="text-2xl text-primary font-extrabold">
             &quot;Automate conversations. Capture leads. Close more customers.&quot;
           </p>
         </div>
@@ -230,7 +230,7 @@ const BrochurePage = () => {
         <div className="max-w-[1440px] mx-auto w-full">
           <div className="text-center mb-32">
             <span className="label-md text-primary tracking-[0.2em] uppercase mb-4 block">Our Process</span>
-            <h2 className="text-7xl font-black tracking-tighter uppercase italic">How We Scale</h2>
+            <h2 className="text-5xl md:text-6xl font-extrabold tracking-tight uppercase">How We Scale</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
@@ -248,10 +248,10 @@ const BrochurePage = () => {
                 transition={{ delay: i * 0.2 }}
                 className="relative z-10 p-12 bg-surface-container-low border border-on-surface/5 rounded-3xl text-center group hover:bg-primary transition-all duration-500"
               >
-                <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center text-2xl font-black text-primary mx-auto mb-8 group-hover:bg-on-primary group-hover:text-primary">
+                <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center text-2xl font-extrabold text-primary mx-auto mb-8 group-hover:bg-on-primary group-hover:text-primary">
                   {item.step}
                 </div>
-                <h3 className="text-3xl font-bold mb-4 group-hover:text-white">{item.title}</h3>
+                <h3 className="text-2xl font-bold mb-4 group-hover:text-white">{item.title}</h3>
                 <p className="text-on-surface-variant group-hover:text-white/80">{item.desc}</p>
               </motion.div>
             ))}
@@ -265,7 +265,7 @@ const BrochurePage = () => {
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <span className="label-md text-primary tracking-[0.2em] uppercase mb-8 block">Why Choose Us</span>
-          <h2 className="text-6xl md:text-8xl font-black tracking-tighter mb-20 leading-none">
+          <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-20 leading-none">
             Why BrandXmedia
           </h2>
           
@@ -301,7 +301,7 @@ const BrochurePage = () => {
           className="relative z-10"
         >
           <span className="label-md text-primary tracking-[0.2em] uppercase mb-8 block">Next Steps</span>
-          <h2 className="text-7xl md:text-9xl font-black tracking-tighter mb-16 leading-none">
+          <h2 className="text-6xl md:text-8xl font-extrabold tracking-tight mb-16 leading-none">
             Ready to Grow <br/>Your Brand?
           </h2>
           
@@ -333,7 +333,7 @@ const BrochurePage = () => {
           
           <a 
             href="mailto:brandxmedia.co@gmail.com" 
-            className="inline-block bg-primary text-on-primary px-16 py-8 rounded-full font-black text-2xl uppercase tracking-tighter hover:scale-105 hover:bg-primary/90 transition-all shadow-[0_0_40px_-10px_rgba(46,91,255,0.5)]"
+            className="inline-block bg-primary text-on-primary px-12 py-6 rounded-full font-bold text-xl uppercase tracking-tight hover:scale-105 hover:bg-primary/90 transition-all shadow-[0_0_40px_-10px_rgba(46,91,255,0.5)]"
           >
             Start Your Journey
           </a>

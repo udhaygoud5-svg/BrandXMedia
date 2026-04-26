@@ -20,18 +20,18 @@ export default function Home() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-6xl mx-auto"
         >
-          <h1 className="text-6xl md:text-8xl lg:text-[120px] font-black tracking-tighter leading-[0.9] mb-12 uppercase italic">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight leading-[1.1] mb-8 uppercase">
             Revenue-First <br/>
             <span className="text-primary">Digital Agency</span>
           </h1>
-          <p className="text-xl md:text-2xl text-on-surface-variant max-w-3xl mx-auto mb-12 font-medium leading-relaxed">
+          <p className="text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto mb-12 font-medium leading-relaxed">
             We design and build websites, automation systems, and branding that drive sales and qualified leads without hiring a full in-house team.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <a href="#contact" className="w-full sm:w-auto bg-primary text-black px-12 py-6 rounded-full font-black text-xl uppercase tracking-tighter hover:scale-105 transition-all shadow-[0_0_50px_-10px_rgba(74,222,128,0.5)]">
+            <a href="#contact" className="w-full sm:w-auto bg-primary text-black px-10 py-5 rounded-full font-bold text-lg uppercase tracking-tight hover:scale-105 transition-all shadow-[0_0_50px_-10px_rgba(74,222,128,0.5)]">
               Book a Strategy Call
             </a>
-            <a href="#services" className="w-full sm:w-auto text-on-surface-variant hover:text-white px-12 py-6 font-bold uppercase tracking-widest text-sm transition-colors">
+            <a href="#services" className="w-full sm:w-auto text-on-surface-variant hover:text-white px-10 py-5 font-bold uppercase tracking-widest text-sm transition-colors">
               Our Services
             </a>
           </div>
@@ -47,14 +47,14 @@ export default function Home() {
               "ApDes Studio", "View Convert", "Wassup Media", "Trans & Log", "Outlier Labs", 
               "Nexchain AI", "FO Management", "Ella AI", "Khushiva", "Ninja WB"
             ].map((logo, i) => (
-              <span key={i} className="text-2xl md:text-4xl font-black tracking-tighter uppercase italic px-8">{logo}</span>
+              <span key={i} className="text-xl md:text-3xl font-extrabold tracking-tight uppercase px-8">{logo}</span>
             ))}
             {/* Repeat for seamless scroll */}
             {[
               "ApDes Studio", "View Convert", "Wassup Media", "Trans & Log", "Outlier Labs", 
               "Nexchain AI", "FO Management", "Ella AI", "Khushiva", "Ninja WB"
             ].map((logo, i) => (
-              <span key={i + 10} className="text-2xl md:text-4xl font-black tracking-tighter uppercase italic px-8">{logo}</span>
+              <span key={i + 10} className="text-xl md:text-3xl font-extrabold tracking-tight uppercase px-8">{logo}</span>
             ))}
           </div>
         </div>
@@ -64,7 +64,7 @@ export default function Home() {
       <section id="services" className="py-40 px-8">
         <div className="max-w-[1440px] mx-auto">
           <span className="label-md text-primary mb-8 block">Our Services</span>
-          <h2 className="text-5xl md:text-7xl font-black tracking-tighter uppercase italic mb-24">What We Do</h2>
+          <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight uppercase mb-24">What We Do</h2>
           
           <div className="flex flex-col">
             {[
@@ -92,11 +92,11 @@ export default function Home() {
                 className="group border-t border-on-surface/10 py-20 flex flex-col lg:grid lg:grid-cols-2 gap-12 hover:bg-white/5 transition-colors px-4 -mx-4 rounded-xl"
               >
                 <div>
-                  <h3 className="text-3xl md:text-5xl font-black tracking-tighter uppercase italic mb-4">{service.title}</h3>
-                  <p className="text-primary font-bold text-lg uppercase tracking-tight">{service.tagline}</p>
+                  <h3 className="text-2xl md:text-4xl font-extrabold tracking-tight uppercase mb-4">{service.title}</h3>
+                  <p className="text-primary font-bold text-base uppercase tracking-tight">{service.tagline}</p>
                 </div>
                 <div className="flex flex-col justify-center">
-                  <p className="text-xl md:text-2xl text-on-surface-variant font-medium leading-relaxed mb-8">
+                  <p className="text-lg md:text-xl text-on-surface-variant font-medium leading-relaxed mb-8">
                     {service.desc}
                   </p>
                   <div className="flex gap-4">
@@ -115,16 +115,16 @@ export default function Home() {
         <div className="max-w-[1440px] mx-auto">
           <div className="text-center mb-24">
             <span className="label-md text-primary mb-4 block">Plans</span>
-            <h2 className="text-5xl md:text-7xl font-black tracking-tighter uppercase italic">Ready to grow?</h2>
+            <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight uppercase">Ready to grow?</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {/* Plan 1 */}
             <motion.div 
               whileHover={{ y: -10 }}
-              className="p-12 rounded-[40px] bg-surface border border-on-surface/10 flex flex-col h-full"
+              className="p-10 rounded-3xl bg-surface border border-on-surface/10 flex flex-col h-full"
             >
-              <h3 className="text-3xl font-black uppercase italic mb-4">High-Converting Landing Page</h3>
+              <h3 className="text-2xl font-extrabold uppercase mb-4">High-Converting Landing Page</h3>
               <p className="text-on-surface-variant mb-12 font-medium">For businesses launching products or testing offers fast without waiting weeks.</p>
               <ul className="space-y-4 mb-12 flex-grow">
                 {["Strategy & discovery session", "Conversion copywriting", "Mobile-optimized design", "Unlimited revisions", "Analytics setup", "48-hour response time"].map((item, i) => (
@@ -139,10 +139,10 @@ export default function Home() {
             {/* Plan 2 */}
             <motion.div 
               whileHover={{ y: -10 }}
-              className="p-12 rounded-[40px] bg-surface border-2 border-primary flex flex-col h-full relative"
+              className="p-10 rounded-3xl bg-surface border-2 border-primary flex flex-col h-full relative"
             >
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-black px-6 py-1 rounded-full font-black text-xs uppercase tracking-widest">Most Popular</div>
-              <h3 className="text-3xl font-black uppercase italic mb-4">Websites & Automation</h3>
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-black px-6 py-1 rounded-full font-bold text-xs uppercase tracking-widest">Most Popular</div>
+              <h3 className="text-2xl font-extrabold uppercase mb-4">Websites & Automation</h3>
               <p className="text-on-surface-variant mb-12 font-medium">For businesses that need a full-scale ecosystem that actually converts browsers into buyers.</p>
               <ul className="space-y-4 mb-12 flex-grow">
                 {["Strategy & discovery session", "Full 5-8 page website", "Full Automation setup", "Conversion copywriting", "CMS/Admin dashboard", "Post-launch support"].map((item, i) => (
@@ -162,7 +162,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-24">
             <span className="label-md text-primary mb-4 block">FAQ</span>
-            <h2 className="text-5xl md:text-7xl font-black tracking-tighter uppercase italic">Questions? We got answers.</h2>
+            <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight uppercase">Questions? We got answers.</h2>
           </div>
           
           <div className="space-y-4">
@@ -177,7 +177,7 @@ export default function Home() {
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
                   className="w-full p-8 flex items-center justify-between text-left hover:bg-white/5 transition-colors"
                 >
-                  <span className="text-2xl font-black uppercase tracking-tighter italic">{faq.q}</span>
+                  <span className="text-xl font-bold uppercase tracking-tight">{faq.q}</span>
                   <ChevronDown className={`transition-transform duration-300 ${openFaq === i ? "rotate-180" : ""}`} />
                 </button>
                 {openFaq === i && (
@@ -198,17 +198,17 @@ export default function Home() {
       {/* 6. CTA / FOOTER */}
       <section className="pt-40 pb-20 px-8 relative overflow-hidden bg-surface">
         <div className="max-w-[1440px] mx-auto text-center relative z-10">
-          <h2 className="text-6xl md:text-9xl font-black tracking-[ -0.05em] uppercase italic mb-12 leading-none">
+          <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight uppercase mb-12 leading-none">
             Ready to stop leaving <br/>
             <span className="text-primary underline decoration-primary/30 underline-offset-8">money on the table?</span>
           </h2>
-          <a href="#contact" className="inline-block bg-primary text-black px-16 py-8 rounded-full font-black text-3xl uppercase tracking-tighter hover:scale-110 transition-all mb-32 shadow-[0_0_80px_-10px_rgba(74,222,128,0.5)]">
+          <a href="#contact" className="inline-block bg-primary text-black px-12 py-6 rounded-full font-bold text-2xl uppercase tracking-tight hover:scale-110 transition-all mb-32 shadow-[0_0_80px_-10px_rgba(74,222,128,0.5)]">
             Book an Intro Call
           </a>
           
           <div className="flex flex-col md:flex-row justify-between items-end gap-12 text-left pt-20 border-t border-on-surface/5">
             <div>
-              <h2 className="text-[10vw] font-black tracking-[-0.08em] uppercase italic leading-[0.7] opacity-10 select-none -mb-4">BRANDXMEDIA</h2>
+              <h2 className="text-[8vw] font-extrabold tracking-tighter uppercase leading-[0.7] opacity-10 select-none -mb-4">BRANDXMEDIA</h2>
               <div className="flex gap-12 mt-8">
                 <div className="flex flex-col gap-4">
                   <span className="label-md text-on-surface-variant">Menu</span>

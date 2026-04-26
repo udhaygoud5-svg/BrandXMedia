@@ -24,15 +24,17 @@ module.exports = {
         "outline": "#8e90a2",
       },
       borderRadius: {
-        "DEFAULT": "0.125rem",
-        "lg": "0.25rem",
-        "xl": "0.5rem",
-        "full": "0.75rem"
+        "DEFAULT": "0.5rem",
+        "lg": "1rem",
+        "xl": "1.5rem",
+        "2xl": "2rem",
+        "3xl": "3rem",
+        "full": "9999px"
       },
       fontFamily: {
-        headline: ["Inter", "sans-serif"],
-        body: ["Inter", "sans-serif"],
-        label: ["Inter", "sans-serif"],
+        headline: ["Plus Jakarta Sans", "Inter", "sans-serif"],
+        body: ["Plus Jakarta Sans", "Inter", "sans-serif"],
+        label: ["Plus Jakarta Sans", "Inter", "sans-serif"],
       }
     },
   },
