@@ -30,6 +30,10 @@ export const metadata: Metadata = {
     images: ['/og-image.png'],
   },
   keywords: ['digital agency', 'web design', 'branding', 'SEO', 'marketing', 'AI strategy'],
+  icons: {
+    icon: '/favicon.png',
+    apple: '/favicon.png',
+  },
 }
 
 export default function RootLayout({
@@ -44,6 +48,15 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} bg-surface text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container`}>
         {children}
+        <a 
+          href="https://wa.me/919347047827?text=Hi,%20I%20want%20to%20grow%20my%20business" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="fixed bottom-8 right-8 z-50 flex items-center justify-center w-16 h-16 bg-[#25D366] text-white rounded-full shadow-[0_4px_20px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform duration-300"
+          aria-label="Chat on WhatsApp"
+        >
+          <span className="material-symbols-outlined text-3xl">chat</span>
+        </a>
       </body>
     </html>
   )
