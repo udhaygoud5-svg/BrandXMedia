@@ -206,12 +206,9 @@ export default function Home() {
             Book an Intro Call
           </a>
           
-          <div className="pt-20 border-t border-on-surface/5">
-            <div className="flex flex-col md:flex-row justify-between items-start gap-12 text-left mb-20">
-              <div className="flex-1">
-                <h2 className="text-[12vw] font-extrabold tracking-tighter uppercase leading-[0.8] opacity-5 select-none -ml-2 mb-8">BRANDXMEDIA</h2>
-              </div>
-              <div className="flex gap-20">
+          <div className="pt-20 border-t border-on-surface/5 relative">
+            <div className="flex flex-col md:flex-row justify-between items-start gap-12 text-left mb-20 relative z-10">
+              <div className="flex gap-12 md:gap-24">
                 <div className="flex flex-col gap-4">
                   <span className="label-md text-on-surface-variant">Menu</span>
                   <a href="#home" className="font-bold uppercase tracking-tight hover:text-primary transition-colors">Home</a>
@@ -225,6 +222,10 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            
+            <h2 className="absolute -bottom-4 left-0 text-[15vw] font-extrabold tracking-tighter uppercase leading-none opacity-[0.03] select-none pointer-events-none whitespace-nowrap">
+              BRANDXMEDIA
+            </h2>
             
             <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-10 border-t border-on-surface/5 text-sm font-bold opacity-40 uppercase tracking-[0.1em]">
               <p>©2026 - All Rights Reserved.</p>
