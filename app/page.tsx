@@ -206,28 +206,28 @@ export default function Home() {
             Book an Intro Call
           </a>
           
-          <div className="pt-20 border-t border-on-surface/5 relative">
-            <div className="flex flex-col md:flex-row justify-between items-start gap-12 text-left mb-20 relative z-10">
-              <div className="flex gap-12 md:gap-24">
-                <div className="flex flex-col gap-4">
-                  <span className="label-md text-on-surface-variant">Menu</span>
-                  <a href="#home" className="font-bold uppercase tracking-tight hover:text-primary transition-colors">Home</a>
-                  <a href="#services" className="font-bold uppercase tracking-tight hover:text-primary transition-colors">Services</a>
-                  <a href="#contact" className="font-bold uppercase tracking-tight hover:text-primary transition-colors">Contact</a>
+          <div className="pt-20 border-t border-on-surface/5 relative overflow-hidden">
+            <div className="flex flex-col md:flex-row justify-between items-start gap-16 text-left mb-24 relative z-10">
+              <div className="flex gap-16 md:gap-32">
+                <div className="flex flex-col gap-5">
+                  <span className="label-md text-primary opacity-80">Menu</span>
+                  <a href="#home" className="text-xl md:text-2xl font-bold uppercase tracking-tight hover:text-primary transition-colors">Home</a>
+                  <a href="#services" className="text-xl md:text-2xl font-bold uppercase tracking-tight hover:text-primary transition-colors">Services</a>
+                  <a href="#contact" className="text-xl md:text-2xl font-bold uppercase tracking-tight hover:text-primary transition-colors">Contact</a>
                 </div>
-                <div className="flex flex-col gap-4">
-                  <span className="label-md text-on-surface-variant">Social</span>
-                  <a href="https://instagram.com/brandxmedia.co" target="_blank" className="font-bold uppercase tracking-tight hover:text-primary transition-colors">Instagram</a>
-                  <a href="https://x.com/BrandxmediaCo" target="_blank" className="font-bold uppercase tracking-tight hover:text-primary transition-colors">Twitter</a>
+                <div className="flex flex-col gap-5">
+                  <span className="label-md text-primary opacity-80">Social</span>
+                  <a href="https://instagram.com/brandxmedia.co" target="_blank" className="text-xl md:text-2xl font-bold uppercase tracking-tight hover:text-primary transition-colors">Instagram</a>
+                  <a href="https://x.com/BrandxmediaCo" target="_blank" className="text-xl md:text-2xl font-bold uppercase tracking-tight hover:text-primary transition-colors">Twitter</a>
                 </div>
               </div>
             </div>
             
-            <h2 className="absolute -bottom-4 left-0 text-[15vw] font-extrabold tracking-tighter uppercase leading-none opacity-[0.03] select-none pointer-events-none whitespace-nowrap">
+            <h2 className="absolute -bottom-10 left-0 text-[18vw] font-extrabold tracking-tighter uppercase leading-none opacity-[0.03] select-none pointer-events-none whitespace-nowrap z-0">
               BRANDXMEDIA
             </h2>
             
-            <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-10 border-t border-on-surface/5 text-sm font-bold opacity-40 uppercase tracking-[0.1em]">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-12 border-t border-on-surface/5 text-[10px] md:text-xs font-bold opacity-40 uppercase tracking-[0.2em] relative z-10">
               <p>©2026 - All Rights Reserved.</p>
               <p>Designed by <span className="text-on-surface opacity-100">BrandXMedia</span></p>
             </div>

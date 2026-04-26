@@ -332,7 +332,7 @@ const BrochurePage = () => {
           
           <a 
             href="mailto:brandxmedia.co@gmail.com" 
-            className="inline-block bg-primary text-on-primary px-12 py-6 rounded-full font-bold text-xl uppercase tracking-tight hover:scale-105 hover:bg-primary/90 transition-all shadow-[0_0_40px_-10px_rgba(46,91,255,0.5)]"
+            className="inline-block bg-primary text-on-primary px-12 py-6 rounded-full font-bold text-xl uppercase tracking-tight hover:scale-105 hover:bg-primary/90 transition-all shadow-[0_0_40px_-10px_rgba(74,222,128,0.5)]"
           >
             Start Your Journey
           </a>
