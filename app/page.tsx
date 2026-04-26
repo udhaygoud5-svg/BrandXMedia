@@ -63,19 +63,19 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: "Website Development",
-                outcome: "Get a website that turns visitors into paying customers.",
+                title: "Web & Software Solutions",
+                outcome: "Custom websites, high-converting landing pages, and management systems built for growth.",
                 icon: "web"
               },
               {
-                title: "WhatsApp Automation",
-                outcome: "Automatically reply to customers and never miss a lead.",
+                title: "Automation Systems",
+                outcome: "WhatsApp chatbots, email automation, and CRM systems that run your business 24/7.",
                 icon: "smart_toy"
               },
               {
-                title: "Business Automation",
-                outcome: "Save hours of manual work with systems that run your business smoothly.",
-                icon: "bolt"
+                title: "Branding & Social Media",
+                outcome: "Brand identity, Instagram growth strategies, and content that turns followers into customers.",
+                icon: "auto_awesome"
               }
             ].map((service, i) => (
               <motion.div 
@@ -184,10 +184,21 @@ export default function Home() {
       <ContactForm />
 
       {/* Footer */}
-      <footer className="w-full py-12 bg-surface text-center border-t border-on-surface/5 relative z-10">
-        <p className="text-sm uppercase tracking-widest text-on-surface-variant opacity-60">
+      <footer className="w-full py-20 bg-surface border-t border-on-surface/5 relative z-10 px-8">
+        <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="text-center md:text-left">
+            <h2 className="text-3xl font-black tracking-tighter mb-4">BRANDXMEDIA</h2>
+            <p className="text-on-surface-variant font-medium">Vijayawada, India</p>
+          </div>
+          <div className="flex justify-center md:justify-end gap-8">
+            <a href="https://instagram.com/brandxmedia.co" target="_blank" rel="noopener noreferrer" className="text-on-surface-variant hover:text-primary transition-colors font-bold uppercase tracking-widest text-xs">Instagram</a>
+            <a href="https://x.com/BrandxmediaCo" target="_blank" rel="noopener noreferrer" className="text-on-surface-variant hover:text-primary transition-colors font-bold uppercase tracking-widest text-xs">Twitter</a>
+            <a href="mailto:brandxmedia.co@gmail.com" className="text-on-surface-variant hover:text-primary transition-colors font-bold uppercase tracking-widest text-xs">Email</a>
+          </div>
+        </div>
+        <div className="mt-20 text-center opacity-30 text-[10px] uppercase tracking-[0.2em]">
           © 2026 BrandXMedia. All rights reserved.
-        </p>
+        </div>
       </footer>
     </main>
   );
