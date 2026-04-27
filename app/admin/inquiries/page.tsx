@@ -8,6 +8,22 @@ export default function AdminInquiries() {
 
   useEffect(() => {
     fetchInquiries();
+
+    // Subscribe to real-time changes
+    const subscription = supabase
+      .channel('inquiries_changes')
+      .on(
+        'postgres_changes',
+        { event: '*', schema: 'public', table: 'inquiries' },
+        (payload) => {
+          fetchInquiries();
+        }
+      )
+      .subscribe();
+
+    return () => {
+      supabase.removeChannel(subscription);
+    };
   }, []);
 
   async function fetchInquiries() {
