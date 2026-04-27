@@ -74,8 +74,22 @@ export default function AdminDashboard() {
             {recentInquiries.map((inquiry) => (
               <div key={inquiry.id} className="flex justify-between items-center p-4 bg-surface rounded-lg border border-outline-variant/10">
                 <div>
-                  <p className="font-bold text-on-surface">{inquiry.name}</p>
-                  <p className="text-sm text-on-surface-variant">{inquiry.email}</p>
+                  <div className="flex items-center gap-2 mb-1">
+                    <p className="font-bold text-on-surface">{inquiry.name}</p>
+                    {inquiry.business && (
+                      <span className="text-xs bg-surface-container-high text-on-surface-variant px-2 py-0.5 rounded border border-outline-variant/10">
+                        🏢 {inquiry.business}
+                      </span>
+                    )}
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <p className="text-sm text-on-surface-variant">{inquiry.email}</p>
+                    {inquiry.phone && (
+                      <p className="text-sm text-on-surface-variant border-l border-outline-variant/30 pl-3">
+                        📞 {inquiry.phone}
+                      </p>
+                    )}
+                  </div>
                 </div>
                 <div className="text-right">
                   <span className={`inline-block px-2 py-1 text-xs rounded-full uppercase tracking-wider ${
